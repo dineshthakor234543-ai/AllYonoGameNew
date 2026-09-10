@@ -3,181 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yono Game Official - Download App & Get Bonus</title>
+    <title>AllYonoGameNew Apk Download & Free Bonus</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-        body {
-            background: #0d1117;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 15px;
-        }
-        .app-card {
-            background: #161b22;
-            width: 100%;
-            max-width: 420px;
-            border-radius: 20px;
-            padding: 25px;
-            border: 1px solid #30363d;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-            text-align: center;
-        }
-        .icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #ff416c, #ff4b2b);
-            border-radius: 20px;
-            margin: 0 auto 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 38px;
-            box-shadow: 0 0 20px rgba(255, 75, 43, 0.4);
-        }
-        h1 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        .subtitle {
-            color: #8b949e;
-            font-size: 13px;
-            margin-bottom: 20px;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            background: #0d1117;
-            padding: 12px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #21262d;
-        }
-        .stat-item h4 {
-            color: #ffb703;
-            font-size: 15px;
-        }
-        .stat-item p {
-            color: #8b949e;
-            font-size: 11px;
-            margin-top: 2px;
-        }
-        .download-btn {
-            display: block;
-            width: 100%;
-            background: linear-gradient(90deg, #00c853, #b2ff59);
-            color: #000000;
-            text-decoration: none;
-            padding: 16px;
-            border-radius: 30px;
-            font-size: 17px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 0 20px rgba(0, 200, 83, 0.4);
-            margin-bottom: 20px;
-            transition: transform 0.2s;
-        }
-        .download-btn:active {
-            transform: scale(0.98);
-        }
-        .features {
-            text-align: left;
-            background: #0d1117;
-            padding: 15px;
-            border-radius: 12px;
-            border: 1px solid #21262d;
-        }
-        .features h3 {
-            font-size: 14px;
-            color: #58a6ff;
-            margin-bottom: 10px;
-        }
-        .features ul {
-            list-style: none;
-        }
-        .features li {
-            font-size: 13px;
-            color: #c9d1d9;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-        }
-        .features li::before {
-            content: "⚡";
-            margin-right: 8px;
-        }
-        .disclaimer {
-            font-size: 10px;
-            color: #484f58;
-            margin-top: 15px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background-color: #f4f5f9; color: #333; padding-bottom: 70px; }
+
+        /* Navigation Bar */
+        .navbar { background: #111; color: white; display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; font-size: 14px; }
+        .logo { font-weight: bold; font-size: 16px; color: #ffeb3b; text-decoration: none; }
+        .nav-links a { color: #ccc; text-decoration: none; margin-left: 10px; font-size: 11px; }
+
+        /* Hero Banner */
+        .hero { background: #000; color: white; text-align: center; padding: 20px 15px; }
+        .hero h1 { font-size: 18px; color: #fff; margin-bottom: 8px; line-height: 1.3; }
+        .hero p { font-size: 11px; color: #aaa; margin-bottom: 12px; }
+
+        /* Search Box */
+        .search-box { display: flex; max-width: 350px; margin: 0 auto; }
+        .search-box input { flex: 1; padding: 8px 12px; border: none; border-radius: 4px 0 0 4px; font-size: 12px; outline: none; }
+        .search-box button { background: #d81b60; color: white; border: none; padding: 8px 12px; border-radius: 0 4px 4px 0; cursor: pointer; font-size: 12px; }
+
+        /* Container & Section Titles */
+        .container { padding: 12px; max-width: 800px; margin: 0 auto; }
+        .section-title { font-size: 15px; font-weight: bold; margin: 10px 0; color: #333; }
+
+        /* App Grid (3 Columns) */
+        .app-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .card { background: white; border-radius: 8px; padding: 10px 5px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: 1px solid #e0e0e0; text-decoration: none; color: #333; display: flex; flex-direction: column; align-items: center; }
+        .card img { width: 55px; height: 55px; border-radius: 12px; object-fit: cover; margin-bottom: 6px; }
+        .card h3 { font-size: 11px; font-weight: bold; margin-bottom: 3px; line-height: 1.2; height: 26px; overflow: hidden; }
+        .stars { color: #ff9800; font-size: 9px; margin-bottom: 6px; }
+        .btn-download { background: #28a745; color: white; font-size: 10px; padding: 4px 0; border-radius: 4px; text-decoration: none; font-weight: bold; width: 90%; display: block; }
+
+        /* Floating Bottom Button */
+        .sticky-bottom { position: fixed; bottom: 10px; left: 5%; width: 90%; background: linear-gradient(90deg, #ff5722, #ff9800); color: white; text-align: center; padding: 12px 0; border-radius: 25px; font-weight: bold; font-size: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; z-index: 1000; }
     </style>
 </head>
 <body>
 
-    <div class="app-card">
-        <div class="icon">🎰</div>
-        <h1>Yono Game</h1>
-        <p class="subtitle">Official APK Download & Free Welcome Bonus</p>
-
-        <div class="stats-grid">
-            <div class="stat-item">
-                <h4>₹51 - ₹100</h4>
-                <p>Sign Up Bonus</p>
-            </div>
-            <div class="stat-item">
-                <h4>48 MB</h4>
-                <p>App Size</p>
-            </div>
-            <div class="stat-item">
-                <h4>100%</h4>
-                <p>Safe & Verified</p>
-            </div>
+    <!-- Header -->
+    <div class="navbar">
+        <a href="#" class="logo">AllYonoGameNew.com</a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Disclaimer</a>
+            <a href="#">Privacy</a>
         </div>
-
-        <!-- Yahan apna Refer/Download Link Paste Karein -->
-        <a href="https://yonovipcash.net/?code=BHGT99U53RX&t=1789014861" class="download-btn">🚀 DOWNLOAD NOW</a>
-
-        <div class="features">
-            <h3>App Highlights:</h3>
-            <ul>
-                <li>Instant UPI & Bank Withdrawal</li>
-                <li>Daily Free Spin & Login Rewards</li>
-                <li>Multiple Rummy & Skill Games</li>
-                <li>24/7 Dedicated Customer Support</li>
-            </ul>
-        </div>
-
-        <p class="disclaimer">18+ Only. This game involves financial risk. Please play responsibly.</p>
     </div>
 
-</body> <!-- Multiple Yono Games Download Section -->
-<div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>AllYonoGameNew Apk Download & Free Bonus ₹45 To ₹800</h1>
+        <p>Latest Yono All Games Apps</p>
+        <div class="search-box">
+            <input type="text" placeholder="Yono Apps search...">
+            <button>🔍</button>
+        </div>
+    </div>
 
-    <!-- Game 1 -->
-    <a href="https://uono777network.online/?code=F9M1NK6DTMW&t=1789017686" class="download-btn" target="_blank">
-        🎰 Download Yono Slots (Bonus ₹51)
+    <!-- Main Grid Content -->
+    <div class="container">
+        <div class="section-title">Latest Apps - AllYonoGameNew</div>
+        
+        <div class="app-grid">
+            
+            <!-- Game 1 -->
+            <a href="https://uono777network.online/?code=F9M1NK6DTMW&t=1789019881" class="card" target="_blank">
+                <img src="https://via.placeholder.com/60/000000/FFFFFF?text=YONO" alt="Yono Rummy">
+                <h3>Best Money Rummy</h3>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <span class="btn-download">Download</span>
+            </a>
+
+            <!-- Game 2 -->
+            <a href="https://yonovipcash.net/?code=BHGT99U53RX&t=1789014861" class="card" target="_blank">
+                <img src="https://via.placeholder.com/60/111111/FFFFFF?text=VIP" alt="Yono VIP">
+                <h3>Money Rummy APK</h3>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <span class="btn-download">Download</span>
+            </a>
+
+            <!-- Game 3 -->
+            <a href="youonogamewinbig.com/?code=LHS8VU2LV3T&t=1789014668" class="card" target="_blank">
+                <img src="https://via.placeholder.com/60/222222/FFFFFF?text=OK" alt="OK Rummy">
+                <h3>OK Rummy APK</h3>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <span class="btn-download">Download</span>
+            </a>
+
+            <!-- Game 4 -->
+            <a href="https://yonorummy053.com/?code=TQJY95NGJNN&t=1789018050" class="card" target="_blank">
+                <img src="https://via.placeholder.com/60/333333/FFFFFF?text=GOLD" alt="Gold Rummy">
+                <h3>Gold Rummy APK</h3>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <span class="btn-download">Download</span>
+            </a>
+
+            <!-- Game 5 -->
+            <a href="https://neta4.vip/?code=DR0NGYTTHRC&t=1789019983"card" target="_blank">
+                <img src="https://via.placeholder.com/60/444444/FFFFFF?text=RUMBLE" alt="Rumble Rummy">
+                <h3>Rumble Rummy</h3>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <span class="btn-download">Download</span>
+            </a>
+
+            <!-- Game 6 -->
+            <a href="https://join789jackpots.com/?code=XPZ3YQHP1PC&t=1789020090" class="card" target="_blank">
+                <img src="https://via.placeholder.com/60/555555/FFFFFF?text=CLUB" alt="Club Rummy">
+                <h3>Club INR APK</h3>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <span class="btn-download">Download</span>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Floating Bottom Button -->
+    <a href="YOUR_MAIN_LINK" class="sticky-bottom">
+        🚀 DOWNLOAD NOW
     </a>
 
-    <!-- Game 2 -->
-    <a href="https://youonogamewinbig.com/?code=LHS8VU2LV3T&t=1789014668" class="download-btn" target="_blank">
-        🃏 Download Yono Rummy VIP (Bonus ₹100)
-    </a>
-
-    <!-- Game 3 -->
-    <a href="https://yonorummy053.com/?code=TQJY95NGJNN&t=1789018050" class="download-btn" target="_blank">
-        🔥 Download Yono Arcade (Bonus ₹77)
-    </a>
-
-</div>
-</html>
+</body>
+</html/>
