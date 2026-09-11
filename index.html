@@ -3,6 +3,708 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>All Games - Download Games</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f6fa;
+    color:#172033;
+}
+
+/* HEADER */
+header{
+    height:82px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 22px;
+    border-bottom:1px solid #ddd;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.site-logo{
+    width:58px;
+    height:58px;
+    border-radius:16px;
+    background:linear-gradient(135deg,#6415b8,#9b35ed);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+    font-weight:bold;
+}
+
+.site-name{
+    font-size:24px;
+    font-weight:800;
+}
+
+.telegram{
+    background:#2196df;
+    color:white;
+    text-decoration:none;
+    padding:15px 22px;
+    border-radius:15px;
+    font-weight:bold;
+}
+
+/* HERO */
+.hero{
+    margin:48px 20px 30px;
+    padding:48px 25px;
+    text-align:center;
+    border-radius:30px;
+    background:linear-gradient(135deg,#5b168c,#8d16d8,#b044ed);
+    color:white;
+}
+
+.hero h1{
+    font-size:44px;
+    margin:20px 0;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    font-size:19px;
+    line-height:1.6;
+}
+
+.hero-buttons{
+    margin-top:30px;
+}
+
+.hero-btn{
+    display:inline-block;
+    padding:17px 30px;
+    border-radius:16px;
+    margin:5px;
+    text-decoration:none;
+    font-weight:bold;
+    background:white;
+    color:#6515a7;
+}
+
+/* SEARCH */
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:0 20px 50px;
+}
+
+.search{
+    width:100%;
+    padding:19px 20px;
+    border:2px solid #b56ae0;
+    border-radius:20px;
+    font-size:19px;
+    outline:none;
+    margin-bottom:25px;
+}
+
+.count{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* CATEGORY */
+.categories{
+    display:flex;
+    gap:12px;
+    overflow-x:auto;
+    margin-bottom:35px;
+}
+
+.category{
+    border:1px solid #ddd;
+    background:white;
+    padding:13px 24px;
+    border-radius:25px;
+    font-weight:bold;
+    white-space:nowrap;
+    cursor:pointer;
+}
+
+.category.active{
+    background:#f0dfff;
+    color:#7018a9;
+    border-color:#d59aed;
+}
+
+/* GAMES */
+.section-title{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.section-text{
+    color:#777;
+    margin-bottom:20px;
+}
+
+.game-card{
+    background:white;
+    border:1px solid #e1e1e1;
+    border-radius:25px;
+    padding:20px;
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+
+.game-logo{
+    width:110px;
+    height:110px;
+    border-radius:22px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.game-info{
+    flex:1;
+}
+
+.game-name{
+    font-size:23px;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+.badge{
+    display:inline-block;
+    background:#f0def9;
+    color:#7218a7;
+    padding:6px 11px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:9px;
+}
+
+.game-description{
+    color:#777;
+    margin-bottom:15px;
+}
+
+.download{
+    display:inline-block;
+    background:#159b60;
+    color:white;
+    text-decoration:none;
+    padding:13px 22px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+.download:hover{
+    background:#107c4d;
+}
+
+/* FOOTER */
+footer{
+    background:#181b27;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:20px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    header{
+        height:75px;
+        padding:0 15px;
+    }
+
+    .site-logo{
+        width:52px;
+        height:52px;
+    }
+
+    .site-name{
+        font-size:18px;
+    }
+
+    .telegram{
+        padding:12px 15px;
+        font-size:14px;
+    }
+
+    .hero{
+        margin:25px 15px;
+        padding:40px 18px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .game-card{
+        padding:15px;
+        gap:15px;
+    }
+
+    .game-logo{
+        width:85px;
+        height:85px;
+        border-radius:17px;
+    }
+
+    .game-name{
+        font-size:19px;
+    }
+
+    .game-description{
+        font-size:14px;
+    }
+
+    .download{
+        padding:11px 17px;
+        font-size:14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo-area">
+        <div class="site-logo">GAME</div>
+        <div class="site-name">ALL GAMES</div>
+    </div>
+
+    <a class="telegram"
+       href="https://t.me/"
+       target="_blank">
+       Telegram ↗
+    </a>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <h1>All Games APK</h1>
+
+    <p>
+        Explore popular games in one clean,
+        fast and mobile-friendly directory.
+        Find your favourite game and download it
+        from its official source.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="#games" class="hero-btn">
+            Explore Games
+        </a>
+
+        <a href="#games" class="hero-btn">
+            View Games
+        </a>
+    </div>
+
+</section>
+
+
+<!-- CONTENT -->
+<div class="container">
+
+    <input
+        type="text"
+        id="search"
+        class="search"
+        placeholder="🔍 Search games..."
+        onkeyup="searchGames()"
+    >
+
+    <div class="count">
+        <span id="gameCount">6</span> games listed
+    </div>
+
+
+    <!-- CATEGORIES -->
+    <div class="categories">
+
+        <button class="category active"
+                onclick="filterGames('all',this)">
+            All
+        </button>
+
+        <button class="category"
+                onclick="filterGames('action',this)">
+            Action
+        </button>
+
+        <button class="category"
+                onclick="filterGames('arcade',this)">
+            Arcade
+        </button>
+
+        <button class="category"
+                onclick="filterGames('racing',this)">
+            Racing
+        </button>
+
+        <button class="category"
+                onclick="filterGames('puzzle',this)">
+            Puzzle
+        </button>
+
+    </div>
+
+
+    <!-- GAMES -->
+    <section id="games">
+
+        <h2 class="section-title">
+            Latest Games
+        </h2>
+
+        <p class="section-text">
+            Choose a game and download it from the official source.
+        </p>
+
+
+        <!-- GAME 1 -->
+        <div class="game-card"
+             data-name="Super Game"
+             data-category="action">
+
+            <img
+                class="game-logo"
+                src="https://via.placeholder.com/150"
+                alt="Super Game Logo">
+
+            <div class="game-info">
+
+                <div class="game-name">
+                    Super Game
+                </div>
+
+                <span class="badge">
+                    ACTION
+                </span>
+
+                <p class="game-description">
+                    Exciting action game for mobile devices.
+                </p>
+
+                <a
+                    class="download"
+                    href="https://example.com"
+                    target="_blank"
+                    rel="noopener">
+                    Download ↗
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- GAME 2 -->
+        <div class="game-card"
+             data-name="Speed Racing"
+             data-category="racing">
+
+            <img
+                class="game-logo"
+                src="https://via.placeholder.com/150"
+                alt="Speed Racing Logo">
+
+            <div class="game-info">
+
+                <div class="game-name">
+                    Speed Racing
+                </div>
+
+                <span class="badge">
+                    RACING
+                </span>
+
+                <p class="game-description">
+                    Fast and fun racing game.
+                </p>
+
+                <a
+                    class="download"
+                    href="https://example.com"
+                    target="_blank"
+                    rel="noopener">
+                    Download ↗
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- GAME 3 -->
+        <div class="game-card"
+             data-name="Puzzle World"
+             data-category="puzzle">
+
+            <img
+                class="game-logo"
+                src="https://via.placeholder.com/150"
+                alt="Puzzle World Logo">
+
+            <div class="game-info">
+
+                <div class="game-name">
+                    Puzzle World
+                </div>
+
+                <span class="badge">
+                    PUZZLE
+                </span>
+
+                <p class="game-description">
+                    Challenge yourself with fun puzzles.
+                </p>
+
+                <a
+                    class="download"
+                    href="https://example.com"
+                    target="_blank"
+                    rel="noopener">
+                    Download ↗
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- GAME 4 -->
+        <div class="game-card"
+             data-name="Arcade Fun"
+             data-category="arcade">
+
+            <img
+                class="game-logo"
+                src="https://via.placeholder.com/150"
+                alt="Arcade Fun Logo">
+
+            <div class="game-info">
+
+                <div class="game-name">
+                    Arcade Fun
+                </div>
+
+                <span class="badge">
+                    ARCADE
+                </span>
+
+                <p class="game-description">
+                    Classic arcade-style mobile game.
+                </p>
+
+                <a
+                    class="download"
+                    href="https://example.com"
+                    target="_blank"
+                    rel="noopener">
+                    Download ↗
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- GAME 5 -->
+        <div class="game-card"
+             data-name="Battle Arena"
+             data-category="action">
+
+            <img
+                class="game-logo"
+                src="https://via.placeholder.com/150"
+                alt="Battle Arena Logo">
+
+            <div class="game-info">
+
+                <div class="game-name">
+                    Battle Arena
+                </div>
+
+                <span class="badge">
+                    ACTION
+                </span>
+
+                <p class="game-description">
+                    Enter the battle arena and play.
+                </p>
+
+                <a
+                    class="download"
+                    href="https://example.com"
+                    target="_blank"
+                    rel="noopener">
+                    Download ↗
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- GAME 6 -->
+        <div class="game-card"
+             data-name="Crazy Arcade"
+             data-category="arcade">
+
+            <img
+                class="game-logo"
+                src="https://via.placeholder.com/150"
+                alt="Crazy Arcade Logo">
+
+            <div class="game-info">
+
+                <div class="game-name">
+                    Crazy Arcade
+                </div>
+
+                <span class="badge">
+                    ARCADE
+                </span>
+
+                <p class="game-description">
+                    Fun arcade gaming experience.
+                </p>
+
+                <a
+                    class="download"
+                    href="https://example.com"
+                    target="_blank"
+                    rel="noopener">
+                    Download ↗
+                </a>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<footer>
+    © 2026 All Games · Game Directory
+</footer>
+
+
+<script>
+
+function searchGames(){
+
+    let input =
+        document.getElementById("search")
+        .value
+        .toLowerCase();
+
+    let games =
+        document.querySelectorAll(".game-card");
+
+    let count = 0;
+
+    games.forEach(function(game){
+
+        let name =
+            game.getAttribute("data-name")
+            .toLowerCase();
+
+        if(name.includes(input)){
+
+            game.style.display = "flex";
+            count++;
+
+        }else{
+
+            game.style.display = "none";
+
+        }
+
+    });
+
+    document.getElementById("gameCount")
+        .innerText = count;
+}
+
+
+function filterGames(category,button){
+
+    let games =
+        document.querySelectorAll(".game-card");
+
+    let count = 0;
+
+    document.querySelectorAll(".category")
+        .forEach(function(btn){
+            btn.classList.remove("active");
+        });
+
+    button.classList.add("active");
+
+    games.forEach(function(game){
+
+        let gameCategory =
+            game.getAttribute("data-category");
+
+        if(category === "all" ||
+           gameCategory === category){
+
+            game.style.display = "flex";
+            count++;
+
+        }else{
+
+            game.style.display = "none";
+
+        }
+
+    });
+
+    document.getElementById("gameCount")
+        .innerText = count;
+}
+
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Yono Games app directory with searchable game listings and external links.">
 <title>All Yono Games APK | Game Directory</title>
 
