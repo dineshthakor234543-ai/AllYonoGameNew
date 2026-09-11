@@ -3,699 +3,418 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>All Games - Download Games</title>
+<meta name="description" content="Yono Games app directory with searchable game listings and external links.">
+<title>All Yono Games APK | Game Directory</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+:root{
+  --primary:#6410a8;
+  --primary2:#8b2be2;
+  --green:#15965c;
+  --bg:#f5f6fa;
+  --text:#18202b;
+  --muted:#6b7280;
+  --border:#e6e8ee;
+  --white:#fff;
 }
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f6fa;
-    color:#172033;
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.45;
 }
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,94%);margin:auto}
 
-/* HEADER */
-header{
-    height:82px;
-    background:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 22px;
-    border-bottom:1px solid #ddd;
-    position:sticky;
-    top:0;
-    z-index:10;
+/* Header */
+.header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
 }
-
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:15px;
+.nav{
+  min-height:68px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;
 }
-
-.site-logo{
-    width:58px;
-    height:58px;
-    border-radius:16px;
-    background:linear-gradient(135deg,#6415b8,#9b35ed);
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:21px;
-    font-weight:bold;
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.brand-logo{
+  width:42px;height:42px;border-radius:11px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--primary),var(--primary2));
+  color:#fff;font-size:13px;
+  box-shadow:0 6px 18px rgba(100,16,168,.25);
 }
-
-.site-name{
-    font-size:24px;
-    font-weight:800;
-}
-
+.brand span{font-size:18px}
+.nav-links{display:flex;gap:24px;color:#4b5563;font-weight:600;font-size:14px}
+.nav-links a:hover{color:var(--primary)}
 .telegram{
-    background:#2196df;
-    color:white;
-    text-decoration:none;
-    padding:15px 22px;
-    border-radius:15px;
-    font-weight:bold;
+  background:#168ddd;color:white;padding:10px 15px;border-radius:10px;
+  font-weight:700;font-size:13px;
 }
+.menu{display:none}
 
-/* HERO */
+/* Hero */
 .hero{
-    margin:48px 20px 30px;
-    padding:48px 25px;
-    text-align:center;
-    border-radius:30px;
-    background:linear-gradient(135deg,#5b168c,#8d16d8,#b044ed);
-    color:white;
+  margin:24px 0;
+  border-radius:22px;
+  padding:42px 24px;
+  text-align:center;color:#fff;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,255,255,.18),transparent 25%),
+    radial-gradient(circle at 85% 80%,rgba(255,255,255,.14),transparent 28%),
+    linear-gradient(135deg,#4c087c,#7621c9 55%,#9a37ed);
+  box-shadow:0 18px 40px rgba(86,21,130,.18);
 }
-
-.hero h1{
-    font-size:44px;
-    margin:20px 0;
+.hero .tag{
+  display:inline-block;background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.22);
+  padding:6px 11px;border-radius:999px;font-size:12px;margin-bottom:12px
 }
-
-.hero p{
-    max-width:650px;
-    margin:auto;
-    font-size:19px;
-    line-height:1.6;
-}
-
-.hero-buttons{
-    margin-top:30px;
-}
-
+.hero h1{font-size:clamp(27px,5vw,46px);margin-bottom:10px}
+.hero p{max-width:700px;margin:auto;color:#f3e8ff;font-size:15px}
+.hero-buttons{margin-top:22px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
 .hero-btn{
-    display:inline-block;
-    padding:17px 30px;
-    border-radius:16px;
-    margin:5px;
-    text-decoration:none;
-    font-weight:bold;
-    background:white;
-    color:#6515a7;
+  background:#fff;color:var(--primary);padding:12px 20px;border-radius:11px;
+  font-weight:800;font-size:14px
 }
+.hero-btn.alt{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3)}
 
-/* SEARCH */
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:0 20px 50px;
+/* Search */
+.tools{
+  display:flex;gap:12px;align-items:center;justify-content:space-between;
+  margin:22px 0 16px;
 }
-
 .search{
-    width:100%;
-    padding:19px 20px;
-    border:2px solid #b56ae0;
-    border-radius:20px;
-    font-size:19px;
-    outline:none;
-    margin-bottom:25px;
+  flex:1;position:relative;
 }
-
-.count{
-    font-size:20px;
-    font-weight:bold;
-    margin-bottom:20px;
+.search input{
+  width:100%;height:48px;border:1px solid var(--border);border-radius:13px;
+  padding:0 16px 0 44px;font-size:14px;outline:none;background:#fff;
 }
+.search input:focus{border-color:#9a55d2;box-shadow:0 0 0 3px rgba(139,43,226,.1)}
+.search-icon{position:absolute;left:15px;top:14px;color:#8a8f98}
+.count{font-size:13px;color:var(--muted);white-space:nowrap}
 
-/* CATEGORY */
-.categories{
-    display:flex;
-    gap:12px;
-    overflow-x:auto;
-    margin-bottom:35px;
+/* Category chips */
+.categories{display:flex;gap:8px;overflow:auto;padding-bottom:5px;margin-bottom:22px}
+.chip{
+  border:1px solid var(--border);background:#fff;color:#555;
+  padding:8px 13px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap;
+  cursor:pointer;
 }
+.chip.active,.chip:hover{background:#f0e3fa;color:var(--primary);border-color:#d9b9ed}
 
-.category{
-    border:1px solid #ddd;
-    background:white;
-    padding:13px 24px;
-    border-radius:25px;
-    font-weight:bold;
-    white-space:nowrap;
-    cursor:pointer;
+/* Section */
+.section-head{
+  display:flex;align-items:end;justify-content:space-between;margin:14px 0;
 }
+.section-head h2{font-size:23px}
+.section-head p{color:var(--muted);font-size:13px}
 
-.category.active{
-    background:#f0dfff;
-    color:#7018a9;
-    border-color:#d59aed;
+/* Cards */
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
 }
-
-/* GAMES */
-.section-title{
-    font-size:30px;
-    margin-bottom:8px;
+.card{
+  background:#fff;border:1px solid var(--border);border-radius:17px;
+  padding:14px;display:flex;gap:13px;align-items:center;
+  box-shadow:0 5px 18px rgba(20,25,40,.05);
+  transition:.2s transform,.2s box-shadow;
 }
-
-.section-text{
-    color:#777;
-    margin-bottom:20px;
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(20,25,40,.10)}
+.logo{
+  width:72px;height:72px;flex:0 0 72px;border-radius:15px;overflow:hidden;
+  background:#eee;display:grid;place-items:center
 }
-
-.game-card{
-    background:white;
-    border:1px solid #e1e1e1;
-    border-radius:25px;
-    padding:20px;
-    margin-bottom:18px;
-    display:flex;
-    align-items:center;
-    gap:20px;
-    box-shadow:0 5px 18px rgba(0,0,0,.06);
-}
-
-.game-logo{
-    width:110px;
-    height:110px;
-    border-radius:22px;
-    object-fit:cover;
-    flex-shrink:0;
-}
-
-.game-info{
-    flex:1;
-}
-
-.game-name{
-    font-size:23px;
-    font-weight:800;
-    margin-bottom:8px;
-}
-
+.logo img{width:100%;height:100%;object-fit:cover}
+.logo-fallback{font-weight:900;color:#fff;font-size:13px;background:linear-gradient(135deg,#166534,#22c55e);width:100%;height:100%;display:grid;place-items:center}
+.info{min-width:0;flex:1}
+.title-row{display:flex;align-items:center;gap:7px}
+.title{font-size:15px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .badge{
-    display:inline-block;
-    background:#f0def9;
-    color:#7218a7;
-    padding:6px 11px;
-    border-radius:8px;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:9px;
+  font-size:9px;font-weight:800;color:var(--primary);
+  background:#f1e6fa;padding:3px 6px;border-radius:5px
 }
-
-.game-description{
-    color:#777;
-    margin-bottom:15px;
+.desc{font-size:11px;color:var(--muted);margin:5px 0}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--green);color:#fff;border-radius:8px;
+  padding:8px 12px;font-size:11px;font-weight:800;
+  white-space:nowrap;
 }
+.btn:hover{filter:brightness(.92)}
+.no-results{display:none;text-align:center;padding:35px;background:#fff;border:1px solid var(--border);border-radius:15px;color:var(--muted)}
 
-.download{
-    display:inline-block;
-    background:#159b60;
-    color:white;
-    text-decoration:none;
-    padding:13px 22px;
-    border-radius:12px;
-    font-weight:bold;
+/* SEO content */
+.content{
+  background:#fff;border:1px solid var(--border);border-radius:18px;
+  padding:25px;margin:32px 0;
 }
+.content h2{font-size:22px;margin:0 0 10px}
+.content h3{font-size:17px;margin:20px 0 7px}
+.content p,.content li{font-size:13px;color:#555}
+.content ul{padding-left:20px}
 
-.download:hover{
-    background:#107c4d;
-}
-
-/* FOOTER */
+/* Footer */
 footer{
-    background:#181b27;
-    color:white;
-    text-align:center;
-    padding:30px 20px;
-    margin-top:20px;
+  background:#21132b;color:#ddd;margin-top:35px;padding:28px 0;
+}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer h3{color:#fff;margin-bottom:6px}
+footer p,footer a{font-size:12px;color:#c7c0cc}
+.notice{
+  margin-top:18px;padding:12px;border-radius:10px;
+  background:#33203e;font-size:11px;color:#ddd
 }
 
-/* MOBILE */
-@media(max-width:600px){
-
-    header{
-        height:75px;
-        padding:0 15px;
-    }
-
-    .site-logo{
-        width:52px;
-        height:52px;
-    }
-
-    .site-name{
-        font-size:18px;
-    }
-
-    .telegram{
-        padding:12px 15px;
-        font-size:14px;
-    }
-
-    .hero{
-        margin:25px 15px;
-        padding:40px 18px;
-    }
-
-    .hero h1{
-        font-size:34px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .game-card{
-        padding:15px;
-        gap:15px;
-    }
-
-    .game-logo{
-        width:85px;
-        height:85px;
-        border-radius:17px;
-    }
-
-    .game-name{
-        font-size:19px;
-    }
-
-    .game-description{
-        font-size:14px;
-    }
-
-    .download{
-        padding:11px 17px;
-        font-size:14px;
-    }
+/* Responsive */
+@media(max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+  .nav{min-height:60px}
+  .brand span{font-size:15px}
+  .brand-logo{width:38px;height:38px}
+  .nav-links{display:none}
+  .menu{display:block;font-size:23px}
+  .telegram{padding:8px 11px;font-size:11px}
+  .hero{padding:32px 18px;border-radius:17px}
+  .hero p{font-size:13px}
+  .tools{display:block}
+  .count{display:block;margin-top:8px}
+  .grid{grid-template-columns:1fr;gap:10px}
+  .card{padding:11px}
+  .logo{width:65px;height:65px;flex-basis:65px}
+  .section-head h2{font-size:20px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-
-    <div class="logo-area">
-        <div class="site-logo">GAME</div>
-        <div class="site-name">ALL GAMES</div>
-    </div>
-
-    <a class="telegram"
-       href="https://t.me/"
-       target="_blank">
-       Telegram ↗
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#">
+      <div class="brand-logo">YONO</div>
+      <span>ALL YONO GAMES</span>
     </a>
 
+    <nav class="nav-links">
+      <a href="#games">Home</a>
+      <a href="#games">Games</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <a class="telegram" href="https://t.me/yonogame_updates" target="_blank" rel="noopener">Telegram ↗</a>
+    <div class="menu">☰</div>
+  </div>
 </header>
 
+<main class="container">
 
-<!-- HERO -->
 <section class="hero">
-
-    <h1>All Games APK</h1>
-
-    <p>
-        Explore popular games in one clean,
-        fast and mobile-friendly directory.
-        Find your favourite game and download it
-        from its official source.
-    </p>
-
-    <div class="hero-buttons">
-        <a href="#games" class="hero-btn">
-            Explore Games
-        </a>
-
-        <a href="#games" class="hero-btn">
-            View Games
-        </a>
-    </div>
-
+  <span class="tag">UPDATED GAME DIRECTORY</span>
+  <h1>All Yono Games APK</h1>
+  <p>Explore popular game apps in one clean, fast and mobile-friendly directory. Search by name or category.</p>
+  <div class="hero-buttons">
+    <a class="hero-btn" href="#games">Explore Games</a>
+    <a class="hero-btn alt" href="#about">Learn More</a>
+  </div>
 </section>
 
-
-<!-- CONTENT -->
-<div class="container">
-
-    <input
-        type="text"
-        id="search"
-        class="search"
-        placeholder="🔍 Search games..."
-        onkeyup="searchGames()"
-    >
-
-    <div class="count">
-        <span id="gameCount">6</span> games listed
-    </div>
-
-
-    <!-- CATEGORIES -->
-    <div class="categories">
-
-        <button class="category active"
-                onclick="filterGames('all',this)">
-            All
-        </button>
-
-        <button class="category"
-                onclick="filterGames('action',this)">
-            Action
-        </button>
-
-        <button class="category"
-                onclick="filterGames('arcade',this)">
-            Arcade
-        </button>
-
-        <button class="category"
-                onclick="filterGames('racing',this)">
-            Racing
-        </button>
-
-        <button class="category"
-                onclick="filterGames('puzzle',this)">
-            Puzzle
-        </button>
-
-    </div>
-
-
-    <!-- GAMES -->
-    <section id="games">
-
-        <h2 class="section-title">
-            Latest Games
-        </h2>
-
-        <p class="section-text">
-            Choose a game and download it from the official source.
-        </p>
-
-
-        <!-- GAME 1 -->
-        <div class="game-card"
-             data-name="Super Game"
-             data-category="action">
-
-            <img
-                class="game-logo"
-                src="https://via.placeholder.com/150"
-                alt="Super Game Logo">
-
-            <div class="game-info">
-
-                <div class="game-name">
-                    Super Game
-                </div>
-
-                <span class="badge">
-                    ACTION
-                </span>
-
-                <p class="game-description">
-                    Exciting action game for mobile devices.
-                </p>
-
-                <a
-                    class="download"
-                    href="https://example.com"
-                    target="_blank"
-                    rel="noopener">
-                    Download ↗
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- GAME 2 -->
-        <div class="game-card"
-             data-name="Speed Racing"
-             data-category="racing">
-
-            <img
-                class="game-logo"
-                src="https://via.placeholder.com/150"
-                alt="Speed Racing Logo">
-
-            <div class="game-info">
-
-                <div class="game-name">
-                    Speed Racing
-                </div>
-
-                <span class="badge">
-                    RACING
-                </span>
-
-                <p class="game-description">
-                    Fast and fun racing game.
-                </p>
-
-                <a
-                    class="download"
-                    href="https://example.com"
-                    target="_blank"
-                    rel="noopener">
-                    Download ↗
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- GAME 3 -->
-        <div class="game-card"
-             data-name="Puzzle World"
-             data-category="puzzle">
-
-            <img
-                class="game-logo"
-                src="https://via.placeholder.com/150"
-                alt="Puzzle World Logo">
-
-            <div class="game-info">
-
-                <div class="game-name">
-                    Puzzle World
-                </div>
-
-                <span class="badge">
-                    PUZZLE
-                </span>
-
-                <p class="game-description">
-                    Challenge yourself with fun puzzles.
-                </p>
-
-                <a
-                    class="download"
-                    href="https://example.com"
-                    target="_blank"
-                    rel="noopener">
-                    Download ↗
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- GAME 4 -->
-        <div class="game-card"
-             data-name="Arcade Fun"
-             data-category="arcade">
-
-            <img
-                class="game-logo"
-                src="https://via.placeholder.com/150"
-                alt="Arcade Fun Logo">
-
-            <div class="game-info">
-
-                <div class="game-name">
-                    Arcade Fun
-                </div>
-
-                <span class="badge">
-                    ARCADE
-                </span>
-
-                <p class="game-description">
-                    Classic arcade-style mobile game.
-                </p>
-
-                <a
-                    class="download"
-                    href="https://example.com"
-                    target="_blank"
-                    rel="noopener">
-                    Download ↗
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- GAME 5 -->
-        <div class="game-card"
-             data-name="Battle Arena"
-             data-category="action">
-
-            <img
-                class="game-logo"
-                src="https://via.placeholder.com/150"
-                alt="Battle Arena Logo">
-
-            <div class="game-info">
-
-                <div class="game-name">
-                    Battle Arena
-                </div>
-
-                <span class="badge">
-                    ACTION
-                </span>
-
-                <p class="game-description">
-                    Enter the battle arena and play.
-                </p>
-
-                <a
-                    class="download"
-                    href="https://example.com"
-                    target="_blank"
-                    rel="noopener">
-                    Download ↗
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- GAME 6 -->
-        <div class="game-card"
-             data-name="Crazy Arcade"
-             data-category="arcade">
-
-            <img
-                class="game-logo"
-                src="https://via.placeholder.com/150"
-                alt="Crazy Arcade Logo">
-
-            <div class="game-info">
-
-                <div class="game-name">
-                    Crazy Arcade
-                </div>
-
-                <span class="badge">
-                    ARCADE
-                </span>
-
-                <p class="game-description">
-                    Fun arcade gaming experience.
-                </p>
-
-                <a
-                    class="download"
-                    href="https://example.com"
-                    target="_blank"
-                    rel="noopener">
-                    Download ↗
-                </a>
-
-            </div>
-        </div>
-
-    </section>
-
+<div class="tools">
+  <div class="search">
+    <span class="search-icon">⌕</span>
+    <input id="search" type="search" placeholder="Search games..." autocomplete="off">
+  </div>
+  <div class="count"><b id="visibleCount">18</b> games listed</div>
 </div>
 
+<div id="categories" class="categories">
+  <button class="chip active" data-cat="all">All</button>
+  <button class="chip" data-cat="rummy">Rummy</button>
+  <button class="chip" data-cat="777">777</button>
+  <button class="chip" data-cat="slots">Slots</button>
+  <button class="chip" data-cat="arcade">Arcade</button>
+</div>
+
+<section id="games">
+  <div class="section-head">
+    <div>
+      <h2>Latest Games</h2>
+      <p>Tap a game to visit its external page.</p>
+    </div>
+  </div>
+
+  <div id="grid" class="grid">
+
+    <!-- Replace image URLs and links with your own verified destinations. -->
+
+    <article class="card" data-name="Yono 777" data-cat="777">
+      <div class="logo"><img src="https://i.ibb.co/Q76L2PvH/file-00000000d8d88208a985d445204ad66e.png" alt="Yono 777"></div>
+      <div class="info"><div class="title-row"><div class="title">Yono 777</div><span class="badge">777</span></div><div class="desc">Popular 777 game listing.</div><a class="btn" href="https://uono777network.online/?code=F9M1NK6DTMW&t=1789100453" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Yono Rummy" data-cat="rummy">
+      <div class="logo"><img src="https://i.ibb.co/TD6W2bcF/IMG-20260821-115441.png" alt="Yono Rummy"></div>
+      <div class="info"><div class="title-row"><div class="title">Yono Rummy</div><span class="badge">RUMMY</span></div><div class="desc">Rummy app listing.</div><a class="btn" href="https://yonorummy053.com/?code=TQJY95NGJNN&t=1789100392" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="YN 777" data-cat="777 slots">
+      <div class="logo"><img src="https://i.ibb.co/XZzCSyzK/IMG-20260806-104747.png" alt="YN 777"></div>
+      <div class="info"><div class="title-row"><div class="title">YN 777</div><span class="badge">SLOTS</span></div><div class="desc">777 and slots listing.</div><a class="btn" href="https://www.yn077.com/?code=4SW6VCFFZB9&t=1789100040" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="DiwaKing" data-cat="slots">
+      <div class="logo"><img src="https://i.ibb.co/LDPS5Hzw/512.png" alt="DiwaKing"></div>
+      <div class="info"><div class="title-row"><div class="title">DiwaKing</div><span class="badge">SLOTS</span></div><div class="desc">Game app listing.</div><a class="btn" href="https://diwakingshare.pro?pid=377806326&channel=2010002&pkg=com.diwaking0002.com" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Spin Crush" data-cat="arcade">
+      <div class="logo"><img src="https://i.ibb.co/pBB7hb62/file-0000000070d88211b9b1f0716033dfca.png" alt="Spin Crush"></div>
+      <div class="info"><div class="title-row"><div class="title">Spin Crush</div><span class="badge">ARCADE</span></div><div class="desc">Arcade game listing.</div><a class="btn" href="https://yonoarcadeapk13.com/?code=V178A7DXWRU&t=1789099638" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Jaiho Rummy" data-cat="rummy">
+      <div class="logo"><img src="https://i.ibb.co/yntBWB4N/file-0000000006408208b64a6b5085070a1b.png" alt="Jaiho Rummy"></div>
+      <div class="info"><div class="title-row"><div class="title">Jaiho Rummy</div><span class="badge">RUMMY</span></div><div class="desc">Rummy app listing.</div><a class="btn" href="https://jaihorummy.xyz/?code=E74BN7J98R2&t=1789097737" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Money Rummy" data-cat="rummy">
+      <div class="logo"><div class="logo-fallback">MONEY<br>RUMMY</div></div>
+      <div class="info"><div class="title-row"><div class="title">Money Rummy</div><span class="badge">RUMMY</span></div><div class="desc">Rummy app listing.</div><a class="btn" href="#" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Share Slots" data-cat="slots">
+      <div class="logo"><div class="logo-fallback">SHARE<br>SLOTS</div></div>
+      <div class="info"><div class="title-row"><div class="title">Share Slots</div><span class="badge">SLOTS</span></div><div class="desc">Slots app listing.</div><a class="btn" href="#" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Gold Rummy" data-cat="rummy">
+      <div class="logo"><div class="logo-fallback">GOLD<br>RUMMY</div></div>
+      <div class="info"><div class="title-row"><div class="title">Gold Rummy</div><span class="badge">RUMMY</span></div><div class="desc">Rummy app listing.</div><a class="btn" href="#" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Get Rummy" data-cat="rummy">
+      <div class="logo"><div class="logo-fallback">GET<br>RUMMY</div></div>
+      <div class="info"><div class="title-row"><div class="title">Get Rummy</div><span class="badge">RUMMY</span></div><div class="desc">Rummy app listing.</div><a class="btn" href="#" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Diwax" data-cat="slots">
+      <div class="logo"><div class="logo-fallback">DIWAX</div></div>
+      <div class="info"><div class="title-row"><div class="title">Diwax</div><span class="badge">SLOTS</span></div><div class="desc">Game app listing.</div><a class="btn" href="#" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Woho Games" data-cat="arcade">
+      <div class="logo"><div class="logo-fallback">WOHO<br>GAME</div></div>
+      <div class="info"><div class="title-row"><div class="title">Woho Games</div><span class="badge">ARCADE</span></div><div class="desc">Arcade app listing.</div><a class="btn" href="#" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Win Rummy" data-cat="rummy">
+      <div class="logo"><div class="logo-fallback">WIN<br>RUMMY</div></div>
+      <div class="info"><div class="title-row"><div class="title">Win Rummy</div><span class="badge">RUMMY</span></div><div class="desc">Rummy app listing.</div><a class="btn" href="#" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Spin Winner" data-cat="arcade">
+      <div class="logo"><div class="logo-fallback">SPIN<br>WINNER</div></div>
+      <div class="info"><div class="title-row"><div class="title">Spin Winner</div><span class="badge">ARCADE</span></div><div class="desc">Game app listing.</div><a class="btn" href="#" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Diwa Top" data-cat="slots">
+      <div class="logo"><div class="logo-fallback">DIWA<br>TOP</div></div>
+      <div class="info"><div class="title-row"><div class="title">Diwa Top</div><span class="badge">SLOTS</span></div><div class="desc">Game app listing.</div><a class="btn" href="#" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="Max Rummy" data-cat="rummy">
+      <div class="logo"><div class="logo-fallback">MAX<br>RUMMY</div></div>
+      <div class="info"><div class="title-row"><div class="title">Max Rummy</div><span class="badge">RUMMY</span></div><div class="desc">Rummy app listing.</div><a class="btn" href="#" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="SVIP 777" data-cat="777">
+      <div class="logo"><div class="logo-fallback">SVIP<br>777</div></div>
+      <div class="info"><div class="title-row"><div class="title">SVIP 777</div><span class="badge">777</span></div><div class="desc">777 app listing.</div><a class="btn" href="#" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+    <article class="card" data-name="UU Rummy" data-cat="rummy">
+      <div class="logo"><div class="logo-fallback">UU<br>RUMMY</div></div>
+      <div class="info"><div class="title-row"><div class="title">UU Rummy</div><span class="badge">RUMMY</span></div><div class="desc">Rummy app listing.</div><a class="btn" href="#" target="_blank" rel="nofollow sponsored noopener">Open ↗</a></div>
+    </article>
+
+  </div>
+  <div id="noResults" class="no-results">No games found. Try another search.</div>
+</section>
+
+<section id="about" class="content">
+  <h2>All Yono Games — Game Directory</h2>
+  <p>Welcome to this mobile-friendly game directory. Use the search and category filters to find a listed app quickly.</p>
+  <h3>How to use</h3>
+  <ul>
+    <li>Search a game name using the search box.</li>
+    <li>Use category buttons to filter the listings.</li>
+    <li>Check the destination before installing any app.</li>
+  </ul>
+  <h3>Important</h3>
+  <p>External links open third-party websites. Review their terms, age requirements, privacy policy and local laws before using any service. This directory does not guarantee the safety, availability or legality of third-party apps.</p>
+</section>
+
+</main>
 
 <footer>
-    © 2026 All Games · Game Directory
+  <div class="container footer-inner">
+    <div>
+      <h3>ALL YONO GAMES</h3>
+      <p>Fast, simple and responsive game directory.</p>
+    </div>
+    <div><a href="#games">Games</a> &nbsp; · &nbsp; <a href="#about">About</a></div>
+  </div>
+  <div class="container notice">18+ where applicable. Play/use third-party services responsibly and only where permitted by law.</div>
 </footer>
 
-
 <script>
+const search = document.getElementById('search');
+const cards = [...document.querySelectorAll('.card')];
+const chips = [...document.querySelectorAll('.chip')];
+const count = document.getElementById('visibleCount');
+const noResults = document.getElementById('noResults');
 
-function searchGames(){
+let activeCat = 'all';
 
-    let input =
-        document.getElementById("search")
-        .value
-        .toLowerCase();
+function filterGames(){
+  const q = search.value.trim().toLowerCase();
+  let visible = 0;
 
-    let games =
-        document.querySelectorAll(".game-card");
+  cards.forEach(card=>{
+    const name = card.dataset.name.toLowerCase();
+    const cat = card.dataset.cat.toLowerCase();
+    const matchesSearch = !q || name.includes(q);
+    const matchesCat = activeCat === 'all' || cat.includes(activeCat);
+    const show = matchesSearch && matchesCat;
 
-    let count = 0;
+    card.style.display = show ? 'flex' : 'none';
+    if(show) visible++;
+  });
 
-    games.forEach(function(game){
-
-        let name =
-            game.getAttribute("data-name")
-            .toLowerCase();
-
-        if(name.includes(input)){
-
-            game.style.display = "flex";
-            count++;
-
-        }else{
-
-            game.style.display = "none";
-
-        }
-
-    });
-
-    document.getElementById("gameCount")
-        .innerText = count;
+  count.textContent = visible;
+  noResults.style.display = visible ? 'none' : 'block';
 }
 
+search.addEventListener('input', filterGames);
 
-function filterGames(category,button){
+chips.forEach(chip=>{
+  chip.addEventListener('click', ()=>{
+    chips.forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    activeCat = chip.dataset.cat;
+    filterGames();
+  });
+});
 
-    let games =
-        document.querySelectorAll(".game-card");
-
-    let count = 0;
-
-    document.querySelectorAll(".category")
-        .forEach(function(btn){
-            btn.classList.remove("active");
-        });
-
-    button.classList.add("active");
-
-    games.forEach(function(game){
-
-        let gameCategory =
-            game.getAttribute("data-category");
-
-        if(category === "all" ||
-           gameCategory === category){
-
-            game.style.display = "flex";
-            count++;
-
-        }else{
-
-            game.style.display = "none";
-
-        }
-
-    });
-
-    document.getElementById("gameCount")
-        .innerText = count;
-}
-
+filterGames();
 </script>
 
 </body>
-</html>
