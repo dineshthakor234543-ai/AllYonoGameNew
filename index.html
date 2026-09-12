@@ -4,228 +4,500 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>All Yono Game Apps - 60 Games List</title>
+<title>Game Rummy App | All Yono Game Apps</title>
 
-<meta name="description" content="Explore All Yono Game Apps and discover 60 game applications with logos, information and download buttons.">
+<meta name="description"
+content="Explore Game Rummy and other Yono game apps in one place. Find game information, features, requirements and authorized download links.">
+
+<meta name="keywords"
+content="Game Rummy, Yono Games, Yono Game Apps, Rummy App, Yono Rummy, Rummy Games">
+
 <meta name="robots" content="index, follow">
 
 <style>
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f4f6fb;
-  color:#222;
-  line-height:1.6;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
 }
 
 /* HEADER */
-.header{
-  background:linear-gradient(135deg,#5b21b6,#2563eb);
-  color:#fff;
-  text-align:center;
-  padding:38px 15px;
+header{
+    background:#111827;
+    color:#fff;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
-.header h1{
-  font-size:34px;
-  margin-bottom:8px;
+.navbar{
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 }
 
-.header p{
-  font-size:16px;
+.logo{
+    color:#fff;
+    font-size:24px;
+    font-weight:800;
 }
 
-/* CONTAINER */
-.container{
-  width:92%;
-  max-width:1100px;
-  margin:30px auto;
+.logo span{
+    color:#ffd166;
 }
 
-/* INTRO */
-.intro{
-  background:#fff;
-  padding:25px;
-  border-radius:14px;
-  margin-bottom:25px;
-  box-shadow:0 3px 15px rgba(0,0,0,.07);
+.nav-links{
+    display:flex;
+    gap:22px;
+    list-style:none;
 }
 
-.intro h2{
-  margin-bottom:10px;
-  font-size:25px;
+.nav-links a{
+    color:#fff;
+    font-weight:600;
+    font-size:15px;
 }
 
-.intro p{
-  color:#555;
+.nav-links a:hover{
+    color:#ffd166;
 }
 
-/* SEARCH */
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#111827,#263b70);
+    color:white;
+    padding:70px 0;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:45px;
+}
+
+.hero-image{
+    text-align:center;
+}
+
+.hero-image img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:35px;
+    background:#fff;
+    padding:8px;
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
+
+.hero h1{
+    font-size:58px;
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#ffd166;
+}
+
+.hero h2{
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#e5e7eb;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 24px;
+    border-radius:8px;
+    font-weight:700;
+    transition:.2s;
+}
+
+.btn-primary{
+    background:#ffd166;
+    color:#111827;
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid #fff;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#111827;
+}
+
+/* STATS */
+.stats{
+    background:#fff;
+    padding:25px 0;
+    box-shadow:0 4px 20px rgba(0,0,0,.07);
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    text-align:center;
+}
+
+.stat{
+    padding:15px;
+}
+
+.stat strong{
+    display:block;
+    font-size:27px;
+    color:#111827;
+}
+
+.stat span{
+    color:#666;
+    font-size:14px;
+}
+
+/* CONTENT */
+section{
+    padding:55px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.section-title h2{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* INFO */
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.info-box{
+    background:#fff;
+    padding:28px;
+    border-radius:14px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.info-box h3{
+    margin-bottom:14px;
+    font-size:22px;
+}
+
+.info-box ul{
+    padding-left:20px;
+}
+
+.info-box li{
+    margin:8px 0;
+}
+
+/* REQUIREMENTS */
+.requirements{
+    background:#111827;
+    color:white;
+}
+
+.req-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.req{
+    background:#1f2937;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.req strong{
+    display:block;
+    color:#ffd166;
+    margin-bottom:6px;
+}
+
+/* STEPS */
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.step{
+    background:#fff;
+    padding:25px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+
+.step-number{
+    width:42px;
+    height:42px;
+    line-height:42px;
+    margin:0 auto 12px;
+    border-radius:50%;
+    background:#111827;
+    color:#fff;
+    font-weight:bold;
+}
+
+/* GAME LIST */
+.games-section{
+    background:#eef2f7;
+}
+
 .search-box{
-  margin-bottom:25px;
+    max-width:600px;
+    margin:0 auto 30px;
 }
 
 .search-box input{
-  width:100%;
-  padding:14px 16px;
-  border:1px solid #ddd;
-  border-radius:9px;
-  font-size:16px;
-  outline:none;
+    width:100%;
+    padding:15px 18px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
 }
 
-.search-box input:focus{
-  border-color:#2563eb;
-}
-
-/* GAME GRID */
 .games-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
 }
 
-/* GAME CARD */
 .game-card{
-  background:#fff;
-  border:1px solid #e8e8e8;
-  border-radius:15px;
-  padding:20px;
-  text-align:center;
-  box-shadow:0 3px 14px rgba(0,0,0,.06);
-  transition:.25s;
+    background:#fff;
+    border-radius:14px;
+    padding:18px;
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+    text-align:center;
+    transition:.2s;
 }
 
 .game-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 8px 25px rgba(0,0,0,.12);
+    transform:translateY(-4px);
 }
 
-/* LOGO */
-.game-logo{
-  width:90px;
-  height:90px;
-  object-fit:cover;
-  border-radius:20px;
-  display:block;
-  margin:0 auto 14px;
-  border:1px solid #eee;
+.game-card img{
+    width:85px;
+    height:85px;
+    object-fit:cover;
+    border-radius:18px;
+    margin-bottom:12px;
+    background:#eee;
 }
 
-/* NUMBER */
-.game-number{
-  display:inline-block;
-  background:#eef3ff;
-  color:#2563eb;
-  padding:4px 10px;
-  border-radius:20px;
-  font-size:12px;
-  margin-bottom:8px;
-}
-
-/* TITLE */
 .game-card h3{
-  font-size:20px;
-  margin-bottom:7px;
+    font-size:18px;
+    margin-bottom:6px;
 }
 
-/* DESCRIPTION */
-.game-card p{
-  color:#666;
-  font-size:14px;
-  min-height:45px;
-  margin-bottom:15px;
+.category{
+    font-size:13px;
+    color:#777;
+    margin-bottom:12px;
 }
 
-/* DOWNLOAD BUTTON */
-.download-btn{
-  display:inline-block;
-  width:100%;
-  padding:12px 15px;
-  border-radius:8px;
-  background:linear-gradient(135deg,#2563eb,#5b21b6);
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.2s;
+.download{
+    display:block;
+    background:#111827;
+    color:#fff;
+    padding:10px;
+    border-radius:7px;
+    font-weight:bold;
 }
 
-.download-btn:hover{
-  opacity:.88;
+.download:hover{
+    background:#374151;
 }
 
-/* PAGINATION */
-.pagination{
-  text-align:center;
-  margin:35px 0;
+/* FAQ */
+.faq{
+    max-width:850px;
+    margin:auto;
 }
 
-.pagination a{
-  display:inline-block;
-  padding:9px 15px;
-  margin:4px;
-  border:1px solid #ddd;
-  border-radius:7px;
-  background:#fff;
-  color:#2563eb;
-  text-decoration:none;
-  font-weight:bold;
+details{
+    background:#fff;
+    margin-bottom:12px;
+    padding:18px 20px;
+    border-radius:10px;
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
 }
 
-.pagination a.active,
-.pagination a:hover{
-  background:#2563eb;
-  color:#fff;
+summary{
+    cursor:pointer;
+    font-weight:700;
+}
+
+/* DISCLAIMER */
+.disclaimer{
+    background:#fff4d6;
+    border-left:5px solid #e0a800;
+    padding:22px;
+    border-radius:8px;
 }
 
 /* FOOTER */
-.footer{
-  background:#151515;
-  color:#ddd;
-  text-align:center;
-  padding:30px 15px;
-  margin-top:40px;
+footer{
+    background:#111827;
+    color:#d1d5db;
+    padding:35px 0;
+    text-align:center;
 }
 
-.footer p{
-  margin:7px 0;
+.footer-links{
+    margin-bottom:15px;
 }
 
-.footer a{
-  color:#fff;
-  text-decoration:none;
-  margin:0 5px;
+.footer-links a{
+    color:#fff;
+    margin:0 8px;
 }
 
-/* TABLET */
-@media(max-width:900px){
-  .games-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+footer p{
+    font-size:14px;
 }
 
 /* MOBILE */
-@media(max-width:600px){
-  .header h1{
-    font-size:27px;
-  }
+@media(max-width:900px){
 
-  .games-grid{
-    grid-template-columns:1fr;
-  }
+    .hero-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
 
-  .container{
-    width:94%;
-  }
+    .buttons{
+        justify-content:center;
+    }
 
-  .game-card{
-    padding:18px;
-  }
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .games-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .req-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .steps{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .nav-links{
+        display:none;
+    }
+}
+
+@media(max-width:550px){
+
+    .hero{
+        padding:45px 0;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero h2{
+        font-size:21px;
+    }
+
+    .hero-image img{
+        width:170px;
+        height:170px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .games-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .game-card{
+        padding:12px;
+    }
+
+    .game-card img{
+        width:70px;
+        height:70px;
+    }
+
+    .game-card h3{
+        font-size:15px;
+    }
+
+    .req-grid,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:40px 0;
+    }
 }
 </style>
 </head>
@@ -233,544 +505,594 @@ body{
 <body>
 
 <!-- HEADER -->
-<header class="header">
-  <h1>All Yono Game Apps</h1>
-  <p>Explore 60 Game Apps in One Place</p>
+<header>
+<div class="container navbar">
+
+<a href="/" class="logo">
+All <span>Yono Game Apps</span>
+</a>
+
+<ul class="nav-links">
+<li><a href="/">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#games">Games</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#disclaimer">Disclaimer</a></li>
+</ul>
+
+</div>
 </header>
 
-<main class="container">
 
-<!-- INTRO -->
-<section class="intro">
-  <h2>List of All Yono Game Apps</h2>
-  <p>
-    Welcome to All Yono Game Apps. Explore our collection of game
-    applications and find useful information about each game.
-    Select the Download button to visit the relevant authorized
-    download page.
-  </p>
-</section>
+<!-- HERO -->
+<section class="hero">
+<div class="container hero-grid">
 
-<!-- SEARCH -->
-<div class="search-box">
-  <input
-    type="text"
-    id="gameSearch"
-    placeholder="Search game name..."
-    onkeyup="searchGames()">
+<div class="hero-image">
+<img src="/images/game-rummy.png"
+alt="Game Rummy App Logo"
+onerror="this.src='/images/all-yono-logo.png'">
 </div>
 
-<!-- GAMES -->
-<section class="games-grid" id="gamesGrid">
+<div>
 
-<!-- 01 -->
-<article class="game-card">
-<img src="<a href="https://ibb.co/jPwk496D"><img src="https://imgbb.com/" class="game-logo" alt="Yono 777 Game Logo">
-<span class="game-number">Game 01</span>
+<h1>Game <span>Rummy</span></h1>
+
+<h2>Game Rummy App Information & Download</h2>
+
+<p>
+Explore Game Rummy information, features, requirements and
+authorized download options from All Yono Game Apps.
+</p>
+
+<div class="buttons">
+
+<a href="#download" class="btn btn-primary">
+Download Now
+</a>
+
+<a href="#games" class="btn btn-outline">
+View All Games
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- STATS -->
+<section class="stats">
+<div class="container stats-grid">
+
+<div class="stat">
+<strong>60+</strong>
+<span>Listed Games</span>
+</div>
+
+<div class="stat">
+<strong>4</strong>
+<span>Main Categories</span>
+</div>
+
+<div class="stat">
+<strong>Mobile</strong>
+<span>Responsive Design</span>
+</div>
+
+<div class="stat">
+<strong>2026</strong>
+<span>Website Update</span>
+</div>
+
+</div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+
+<div class="section-title">
+<h2>About Game Rummy</h2>
+<p>Game information and useful details</p>
+</div>
+
+<div class="info-grid">
+
+<div class="info-box">
+<h3>What is Game Rummy?</h3>
+
+<p>
+Game Rummy is a rummy-focused gaming app listing featured
+on this directory. Users should check the application's
+current availability, terms, age requirements and applicable
+local laws before using any gaming service.
+</p>
+
+<p style="margin-top:12px;">
+All Yono Game Apps is an independent directory and does not
+claim ownership of third-party applications listed on this page.
+</p>
+</div>
+
+
+<div class="info-box">
+<h3>Key Features</h3>
+
+<ul>
+<li>Simple mobile-friendly interface</li>
+<li>Rummy-focused game information</li>
+<li>Easy navigation</li>
+<li>Game category listings</li>
+<li>Responsive design for mobile devices</li>
+<li>Quick access to authorized links</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- FEATURES -->
+<section>
+<div class="container">
+
+<div class="section-title">
+<h2>Why Use All Yono Game Apps?</h2>
+<p>Everything is organized in one simple directory.</p>
+</div>
+
+<div class="info-grid">
+
+<div class="info-box">
+<h3>Easy Navigation</h3>
+<p>
+Find rummy, arcade, slots and other listed games
+without searching through multiple pages.
+</p>
+</div>
+
+<div class="info-box">
+<h3>Mobile Friendly</h3>
+<p>
+The website layout automatically adjusts to smartphones,
+tablets and desktop screens.
+</p>
+</div>
+
+<div class="info-box">
+<h3>Game Information</h3>
+<p>
+Each listing can include its logo, category and a link
+to the relevant authorized source.
+</p>
+</div>
+
+<div class="info-box">
+<h3>Simple Design</h3>
+<p>
+Clean cards and clear buttons make the directory easy
+to browse.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- REQUIREMENTS -->
+<section class="requirements">
+<div class="container">
+
+<div class="section-title">
+<h2>System Requirements</h2>
+<p style="color:#d1d5db;">
+Basic requirements may vary by individual application.
+</p>
+</div>
+
+<div class="req-grid">
+
+<div class="req">
+<strong>Device</strong>
+Android / Compatible Device
+</div>
+
+<div class="req">
+<strong>Storage</strong>
+Keep enough free storage
+</div>
+
+<div class="req">
+<strong>Internet</strong>
+Stable Internet Connection
+</div>
+
+<div class="req">
+<strong>Security</strong>
+Use trusted sources
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- DOWNLOAD STEPS -->
+<section id="download">
+<div class="container">
+
+<div class="section-title">
+<h2>How to Download</h2>
+<p>Use only authorized and trusted download sources.</p>
+</div>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>Choose Game</h3>
+<p>Select the game you want from the list.</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>Check Source</h3>
+<p>Verify that the download link belongs to an authorized source.</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>Download</h3>
+<p>Download the application only from a trusted source.</p>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<h3>Install</h3>
+<p>Follow your device's normal installation and security process.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ALL GAMES -->
+<section id="games" class="games-section">
+<div class="container">
+
+<div class="section-title">
+<h2>All Yono Games</h2>
+<p>Browse our 60-game directory.</p>
+</div>
+
+<div class="search-box">
+<input
+type="search"
+id="gameSearch"
+placeholder="Search game name..."
+onkeyup="searchGames()">
+</div>
+
+<div class="games-grid" id="gameList">
+
+
+<!-- 1 -->
+<div class="game-card">
+<img src="<a href="https://ibb.co/n8ZskDhG"><img src="https://i.ibb.co/KzRjy9CP/file-00000000d8d88208a985d445204ad66e.png" alt="file-00000000d8d88208a985d445204ad66e" border="0"></a>" alt="Yono 777 Logo">
 <h3>Yono 777</h3>
-<p>Explore Yono 777 game app information and features.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Yono Game</div>
+<a href="https://uono777network.online/?code=F9M1NK6DTMW&t=1789182158" class="download">Download</a>
+</div>
 
-<!-- 02 -->
-<article class="game-card">
-<img src="/images/yn-777.png" class="game-logo" alt="YN 777 Game Logo">
-<span class="game-number">Game 02</span>
+<!-- 2 -->
+<div class="game-card">
+<img src="<a href="https://ibb.co/1GSGjWZY"><img src="https://i.ibb.co/8ghgtZMn/IMG-20260806-104747.png" alt="IMG-20260806-104747" border="0"></a><br /><a target='_blank' href='https://usefulwebtool.com/math-keyboard'>fraction keyboard</a><br />" alt="YN 777 Logo">
 <h3>YN 777</h3>
-<p>Explore YN 777 game app information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Game App</div>
+<a href="https://www.yn077.com/?code=4SW6VCFFZB9&t=1789182312" class="download">Download</a>
+</div>
 
-<!-- 03 -->
-<article class="game-card">
-<img src="/images/spin-crush.png" class="game-logo" alt="Spin Crush Game Logo">
-<span class="game-number">Game 03</span>
+<!-- 3 -->
+<div class="game-card">
+<img src="/images/spin-crush.png" alt="Spin Crush Logo">
 <h3>Spin Crush</h3>
-<p>Check Spin Crush game application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Spin Game</div>
+<a href="#" class="download">Download</a>
+</div>
 
-<!-- 04 -->
-<article class="game-card">
-<img src="/images/jaiho-rummy.png" class="game-logo" alt="Jaiho Rummy Game Logo">
-<span class="game-number">Game 04</span>
+<!-- 4 -->
+<div class="game-card">
+<img src="/images/jaiho-rummy.png" alt="Jaiho Rummy Logo">
 <h3>Jaiho Rummy</h3>
-<p>Explore Jaiho Rummy game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
-<!-- 05 -->
-<article class="game-card">
-<img src="/images/hi-rummy.png" class="game-logo" alt="Hi Rummy Game Logo">
-<span class="game-number">Game 05</span>
+<!-- 5 -->
+<div class="game-card">
+<img src="/images/hi-rummy.png" alt="Hi Rummy Logo">
 <h3>Hi Rummy</h3>
-<p>Find Hi Rummy application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
-<!-- 06 -->
-<article class="game-card">
-<img src="/images/gold-rummy.png" class="game-logo" alt="Gold Rummy Game Logo">
-<span class="game-number">Game 06</span>
+<!-- 6 -->
+<div class="game-card">
+<img src="/images/gold-rummy.png" alt="Gold Rummy Logo">
 <h3>Gold Rummy</h3>
-<p>Explore Gold Rummy application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
-<!-- 07 -->
-<article class="game-card">
-<img src="/images/money-rummy.png" class="game-logo" alt="Money Rummy Game Logo">
-<span class="game-number">Game 07</span>
+<!-- 7 -->
+<div class="game-card">
+<img src="/images/money-rummy.png" alt="Money Rummy Logo">
 <h3>Money Rummy</h3>
-<p>Explore Money Rummy game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
-<!-- 08 -->
-<article class="game-card">
-<img src="/images/max-rummy.png" class="game-logo" alt="Max Rummy Game Logo">
-<span class="game-number">Game 08</span>
+<!-- 8 -->
+<div class="game-card">
+<img src="/images/max-rummy.png" alt="Max Rummy Logo">
 <h3>Max Rummy</h3>
-<p>Check Max Rummy application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
-<!-- 09 -->
-<article class="game-card">
-<img src="/images/boss-rummy.png" class="game-logo" alt="Boss Rummy Game Logo">
-<span class="game-number">Game 09</span>
+<!-- 9 -->
+<div class="game-card">
+<img src="/images/boss-rummy.png" alt="Boss Rummy Logo">
 <h3>Boss Rummy</h3>
-<p>Explore Boss Rummy game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 10 -->
-<article class="game-card">
-<img src="/images/win-rummy.png" class="game-logo" alt="Win Rummy Game Logo">
-<span class="game-number">Game 10</span>
+<div class="game-card">
+<img src="/images/win-rummy.png" alt="Win Rummy Logo">
 <h3>Win Rummy</h3>
-<p>Find Win Rummy application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 11 -->
-<article class="game-card">
-<img src="/images/rumble-rummy.png" class="game-logo" alt="Rumble Rummy Game Logo">
-<span class="game-number">Game 11</span>
+<div class="game-card">
+<img src="/images/rumble-rummy.png" alt="Rumble Rummy Logo">
 <h3>Rumble Rummy</h3>
-<p>Explore Rumble Rummy application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 12 -->
-<article class="game-card">
-<img src="/images/rummy-888.png" class="game-logo" alt="Rummy 888 Game Logo">
-<span class="game-number">Game 12</span>
+<div class="game-card">
+<img src="/images/rummy-888.png" alt="Rummy 888 Logo">
 <h3>Rummy 888</h3>
-<p>Check Rummy 888 game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 13 -->
-<article class="game-card">
-<img src="/images/rummy-91.png" class="game-logo" alt="Rummy 91 Game Logo">
-<span class="game-number">Game 13</span>
+<div class="game-card">
+<img src="/images/rummy-91.png" alt="Rummy 91 Logo">
 <h3>Rummy 91</h3>
-<p>Explore Rummy 91 application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 14 -->
-<article class="game-card">
-<img src="/images/rummy-ludo.png" class="game-logo" alt="Rummy Ludo Game Logo">
-<span class="game-number">Game 14</span>
+<div class="game-card">
+<img src="/images/rummy-ludo.png" alt="Rummy Ludo Logo">
 <h3>Rummy Ludo</h3>
-<p>Find Rummy Ludo application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy / Ludo</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 15 -->
-<article class="game-card">
-<img src="/images/love-rummy.png" class="game-logo" alt="Love Rummy Game Logo">
-<span class="game-number">Game 15</span>
+<div class="game-card">
+<img src="/images/love-rummy.png" alt="Love Rummy Logo">
 <h3>Love Rummy</h3>
-<p>Explore Love Rummy game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 16 -->
-<article class="game-card">
-<img src="/images/abc-rummy.png" class="game-logo" alt="ABC Rummy Game Logo">
-<span class="game-number">Game 16</span>
+<div class="game-card">
+<img src="/images/abc-rummy.png" alt="ABC Rummy Logo">
 <h3>ABC Rummy</h3>
-<p>Check ABC Rummy application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 17 -->
-<article class="game-card">
-<img src="/images/ind-rummy.png" class="game-logo" alt="IND Rummy Game Logo">
-<span class="game-number">Game 17</span>
+<div class="game-card">
+<img src="/images/ind-rummy.png" alt="IND Rummy Logo">
 <h3>IND Rummy</h3>
-<p>Explore IND Rummy application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 18 -->
-<article class="game-card">
-<img src="/images/top-rummy.png" class="game-logo" alt="Top Rummy Game Logo">
-<span class="game-number">Game 18</span>
+<div class="game-card">
+<img src="/images/top-rummy.png" alt="Top Rummy Logo">
 <h3>Top Rummy</h3>
-<p>Find Top Rummy game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 19 -->
-<article class="game-card">
-<img src="/images/joy-rummy.png" class="game-logo" alt="Joy Rummy Game Logo">
-<span class="game-number">Game 19</span>
+<div class="game-card">
+<img src="/images/joy-rummy.png" alt="Joy Rummy Logo">
 <h3>Joy Rummy</h3>
-<p>Explore Joy Rummy application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 20 -->
-<article class="game-card">
-<img src="/images/game-rummy.png" class="game-logo" alt="Game Rummy Logo">
-<span class="game-number">Game 20</span>
+<div class="game-card">
+<img src="/images/game-rummy.png" alt="Game Rummy Logo">
 <h3>Game Rummy</h3>
-<p>Check Game Rummy application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 21 -->
-<article class="game-card">
-<img src="/images/inr-rummy.png" class="game-logo" alt="INR Rummy Game Logo">
-<span class="game-number">Game 21</span>
+<div class="game-card">
+<img src="/images/inr-rummy.png" alt="INR Rummy Logo">
 <h3>INR Rummy</h3>
-<p>Explore INR Rummy game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Rummy</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 22 -->
-<article class="game-card">
-<img src="/images/club-inr.png" class="game-logo" alt="Club INR Game Logo">
-<span class="game-number">Game 22</span>
+<div class="game-card">
+<img src="/images/club-inr.png" alt="Club INR Logo">
 <h3>Club INR</h3>
-<p>Find Club INR application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Game App</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 23 -->
-<article class="game-card">
-<img src="/images/jaiho-91.png" class="game-logo" alt="Jaiho 91 Game Logo">
-<span class="game-number">Game 23</span>
+<div class="game-card">
+<img src="/images/jaiho-91.png" alt="Jaiho 91 Logo">
 <h3>Jaiho 91</h3>
-<p>Explore Jaiho 91 application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Game App</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 24 -->
-<article class="game-card">
-<img src="/images/jaiho-777.png" class="game-logo" alt="Jaiho 777 Game Logo">
-<span class="game-number">Game 24</span>
+<div class="game-card">
+<img src="/images/jaiho-777.png" alt="Jaiho 777 Logo">
 <h3>Jaiho 777</h3>
-<p>Check Jaiho 777 game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Game App</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 25 -->
-<article class="game-card">
-<img src="/images/jaiho-arcade.png" class="game-logo" alt="Jaiho Arcade Game Logo">
-<span class="game-number">Game 25</span>
+<div class="game-card">
+<img src="/images/jaiho-arcade.png" alt="Jaiho Arcade Logo">
 <h3>Jaiho Arcade</h3>
-<p>Explore Jaiho Arcade application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Arcade</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 26 -->
-<article class="game-card">
-<img src="/images/jaiho-spin.png" class="game-logo" alt="Jaiho Spin Game Logo">
-<span class="game-number">Game 26</span>
+<div class="game-card">
+<img src="/images/jaiho-spin.png" alt="Jaiho Spin Logo">
 <h3>Jaiho Spin</h3>
-<p>Find Jaiho Spin application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Spin</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 27 -->
-<article class="game-card">
-<img src="/images/jaiho-slots.png" class="game-logo" alt="Jaiho Slots Game Logo">
-<span class="game-number">Game 27</span>
+<div class="game-card">
+<img src="/images/jaiho-slots.png" alt="Jaiho Slots Logo">
 <h3>Jaiho Slots</h3>
-<p>Explore Jaiho Slots application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Slots</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 28 -->
-<article class="game-card">
-<img src="/images/spin-777.png" class="game-logo" alt="Spin 777 Game Logo">
-<span class="game-number">Game 28</span>
+<div class="game-card">
+<img src="/images/spin-777.png" alt="Spin 777 Logo">
 <h3>Spin 777</h3>
-<p>Check Spin 777 game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Spin</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 29 -->
-<article class="game-card">
-<img src="/images/spin-winner.png" class="game-logo" alt="Spin Winner Game Logo">
-<span class="game-number">Game 29</span>
+<div class="game-card">
+<img src="/images/spin-winner.png" alt="Spin Winner Logo">
 <h3>Spin Winner</h3>
-<p>Explore Spin Winner application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Spin</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 30 -->
-<article class="game-card">
-<img src="/images/spin-lucky.png" class="game-logo" alt="Spin Lucky Game Logo">
-<span class="game-number">Game 30</span>
+<div class="game-card">
+<img src="/images/spin-lucky.png" alt="Spin Lucky Logo">
 <h3>Spin Lucky</h3>
-<p>Find Spin Lucky application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Spin</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 31 -->
-<article class="game-card">
-<img src="/images/spin-gold.png" class="game-logo" alt="Spin Gold Game Logo">
-<span class="game-number">Game 31</span>
+<div class="game-card">
+<img src="/images/spin-gold.png" alt="Spin Gold Logo">
 <h3>Spin Gold</h3>
-<p>Explore Spin Gold application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Spin</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 32 -->
-<article class="game-card">
-<img src="/images/slots-winner.png" class="game-logo" alt="Slots Winner Game Logo">
-<span class="game-number">Game 32</span>
+<div class="game-card">
+<img src="/images/slots-winner.png" alt="Slots Winner Logo">
 <h3>Slots Winner</h3>
-<p>Check Slots Winner game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Slots</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 33 -->
-<article class="game-card">
-<img src="/images/slots-spin.png" class="game-logo" alt="Slots Spin Game Logo">
-<span class="game-number">Game 33</span>
+<div class="game-card">
+<img src="/images/slots-spin.png" alt="Slots Spin Logo">
 <h3>Slots Spin</h3>
-<p>Explore Slots Spin application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Slots</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 34 -->
-<article class="game-card">
-<img src="/images/saga-slots.png" class="game-logo" alt="Saga Slots Game Logo">
-<span class="game-number">Game 34</span>
+<div class="game-card">
+<img src="/images/saga-slots.png" alt="Saga Slots Logo">
 <h3>Saga Slots</h3>
-<p>Find Saga Slots application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Slots</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 35 -->
-<article class="game-card">
-<img src="/images/ind-slots.png" class="game-logo" alt="IND Slots Game Logo">
-<span class="game-number">Game 35</span>
+<div class="game-card">
+<img src="/images/ind-slots.png" alt="IND Slots Logo">
 <h3>IND Slots</h3>
-<p>Explore IND Slots application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Slots</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 36 -->
-<article class="game-card">
-<img src="/images/ind-club.png" class="game-logo" alt="IND Club Game Logo">
-<span class="game-number">Game 36</span>
+<div class="game-card">
+<img src="/images/ind-club.png" alt="IND Club Logo">
 <h3>IND Club</h3>
-<p>Check IND Club game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Game App</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 37 -->
-<article class="game-card">
-<img src="/images/ind-bingo.png" class="game-logo" alt="IND Bingo Game Logo">
-<span class="game-number">Game 37</span>
+<div class="game-card">
+<img src="/images/ind-bingo.png" alt="IND Bingo Logo">
 <h3>IND Bingo</h3>
-<p>Explore IND Bingo application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Bingo</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 38 -->
-<article class="game-card">
-<img src="/images/hindi-777.png" class="game-logo" alt="Hindi 777 Game Logo">
-<span class="game-number">Game 38</span>
+<div class="game-card">
+<img src="/images/hindi-777.png" alt="Hindi 777 Logo">
 <h3>Hindi 777</h3>
-<p>Find Hindi 777 application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
+<div class="category">Game App</div>
+<a href="#" class="download">Download</a>
+</div>
 
 <!-- 39 -->
-<article class="game-card">
-<img src="/images/diwaking.png" class="game-logo" alt="DiwaKing Game Logo">
-<span class="game-number">Game 39</span>
-<h3>DiwaKing</h3>
-<p>Explore DiwaKing application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 40 -->
-<article class="game-card">
-<img src="/images/diwa777.png" class="game-logo" alt="Diwa777 Game Logo">
-<span class="game-number">Game 40</span>
-<h3>Diwa777</h3>
-<p>Check Diwa777 game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 41 -->
-<article class="game-card">
-<img src="/images/diwawin.png" class="game-logo" alt="DiwaWin Game Logo">
-<span class="game-number">Game 41</span>
-<h3>DiwaWin</h3>
-<p>Explore DiwaWin application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 42 -->
-<article class="game-card">
-<img src="/images/diwax.png" class="game-logo" alt="DiwaX Game Logo">
-<span class="game-number">Game 42</span>
-<h3>DiwaX</h3>
-<p>Find DiwaX application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 43 -->
-<article class="game-card">
-<img src="/images/gogo-rummy.png" class="game-logo" alt="GoGo Rummy Game Logo">
-<span class="game-number">Game 43</span>
-<h3>GoGo Rummy</h3>
-<p>Explore GoGo Rummy application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 44 -->
-<article class="game-card">
-<img src="/images/maha-games.png" class="game-logo" alt="Maha Games Logo">
-<span class="game-number">Game 44</span>
-<h3>Maha Games</h3>
-<p>Check Maha Games application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 45 -->
-<article class="game-card">
-<img src="/images/teen-patti-master.png" class="game-logo" alt="Teen Patti Master Game Logo">
-<span class="game-number">Game 45</span>
-<h3>Teen Patti Master</h3>
-<p>Explore Teen Patti Master application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 46 -->
-<article class="game-card">
-<img src="/images/yono-arcade.png" class="game-logo" alt="Yono Arcade Game Logo">
-<span class="game-number">Game 46</span>
-<h3>Yono Arcade</h3>
-<p>Find Yono Arcade application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 47 -->
-<article class="game-card">
-<img src="/images/yono-101z.png" class="game-logo" alt="Yono 101Z Game Logo">
-<span class="game-number">Game 47</span>
-<h3>Yono 101Z</h3>
-<p>Explore Yono 101Z application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 48 -->
-<article class="game-card">
-<img src="/images/yono-567.png" class="game-logo" alt="Yono 567 Game Logo">
-<span class="game-number">Game 48</span>
-<h3>Yono 567</h3>
-<p>Check Yono 567 game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 49 -->
-<article class="game-card">
-<img src="/images/789-jackpots.png" class="game-logo" alt="789 Jackpots Game Logo">
-<span class="game-number">Game 49</span>
-<h3>789 Jackpots</h3>
-<p>Explore 789 Jackpots application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 50 -->
-<article class="game-card">
-<img src="/images/my-777.png" class="game-logo" alt="MY 777 Game Logo">
-<span class="game-number">Game 50</span>
-<h3>MY 777</h3>
-<p>Find MY 777 application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 51 -->
-<article class="game-card">
-<img src="/images/rummy-365.png" class="game-logo" alt="Rummy 365 Game Logo">
-<span class="game-number">Game 51</span>
-<h3>Rummy 365</h3>
-<p>Explore Rummy 365 application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 52 -->
-<article class="game-card">
-<img src="/images/neta-vip.png" class="game-logo" alt="NETA VIP Game Logo">
-<span class="game-number">Game 52</span>
-<h3>NETA VIP</h3>
-<p>Check NETA VIP game information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 53 -->
-<article class="game-card">
-<img src="/images/777-game.png" class="game-logo" alt="777 Game Logo">
-<span class="game-number">Game 53</span>
-<h3>777 Game</h3>
-<p>Explore 777 Game application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 54 -->
-<article class="game-card">
-<img src="/images/yono-rummy.png" class="game-logo" alt="Yono Rummy Game Logo">
-<span class="game-number">Game 54</span>
-<h3>Yono Rummy</h3>
-<p>Find Yono Rummy application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 55 -->
-<article class="game-card">
-<img src="/images/share-slots.png" class="game-logo" alt="Share Slots Game Logo">
-<span class="game-number">Game 55</span>
-<h3>Share Slots</h3>
-<p>Explore Share Slots application.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 56 -->
-<article class="game-card">
-<img src="/images/ever-777.png" class="game-logo" alt="Ever 777 Game Logo">
-<span class="game-number">Game 56</span>
-<h3>Ever 777</h3>
-<p>Check Ever 777 application information.</p>
-<a href="#" class="download-btn">Download</a>
-</article>
-
-<!-- 57 -->
-<article class="game-card">
-<img src="/images/ok-rummy.png" class="game-logo" alt="OK Rummy Game Logo">
-<span class="game-number">Game 57</span>
-<h3>OK Rummy</h3>
-<p>Explore OK Rummy application.</p>
-<a href="#" cla
+<div class="game-card">
+<img src="/images/diwaking.png" alt="DiwaKing Logo">
+<h3>DiwaKing
