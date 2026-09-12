@@ -1,1097 +1,1074 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Game Rummy App | All Yono Game Apps</title>
+  <title>YONO Games - Latest Games & App Links</title>
 
-<meta name="description"
-content="Explore Game Rummy and other Yono game apps in one place. Find game information, features, requirements and authorized download links.">
+  <meta name="description"
+    content="Explore the latest YONO games and gaming apps. Find game information, app links, features and updates in one place.">
 
-<meta name="keywords"
-content="Game Rummy, Yono Games, Yono Game Apps, Rummy App, Yono Rummy, Rummy Games">
+  <meta name="keywords"
+    content="YONO Games, YONO Game, YONO Rummy, Hi Rummy, gaming apps, game download">
 
-<meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#111827">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f7fb;
-    color:#222;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-}
-
-.container{
-    width:92%;
-    max-width:1150px;
-    margin:auto;
-}
-
-/* HEADER */
-header{
-    background:#111827;
-    color:#fff;
-    position:sticky;
-    top:0;
-    z-index:999;
-    box-shadow:0 3px 15px rgba(0,0,0,.15);
-}
-
-.navbar{
-    min-height:70px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
-
-.logo{
-    color:#fff;
-    font-size:24px;
-    font-weight:800;
-}
-
-.logo span{
-    color:#ffd166;
-}
-
-.nav-links{
-    display:flex;
-    gap:22px;
-    list-style:none;
-}
-
-.nav-links a{
-    color:#fff;
-    font-weight:600;
-    font-size:15px;
-}
-
-.nav-links a:hover{
-    color:#ffd166;
-}
-
-/* HERO */
-.hero{
-    background:linear-gradient(135deg,#111827,#263b70);
-    color:white;
-    padding:70px 0;
-}
-
-.hero-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:45px;
-}
-
-.hero-image{
-    text-align:center;
-}
-
-.hero-image img{
-    width:220px;
-    height:220px;
-    object-fit:cover;
-    border-radius:35px;
-    background:#fff;
-    padding:8px;
-    box-shadow:0 15px 40px rgba(0,0,0,.3);
-}
-
-.hero h1{
-    font-size:58px;
-    line-height:1;
-    margin-bottom:20px;
-}
-
-.hero h1 span{
-    color:#ffd166;
-}
-
-.hero h2{
-    font-size:25px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    color:#e5e7eb;
-    margin-bottom:25px;
-}
-
-.buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:13px 24px;
-    border-radius:8px;
-    font-weight:700;
-    transition:.2s;
-}
-
-.btn-primary{
-    background:#ffd166;
-    color:#111827;
-}
-
-.btn-primary:hover{
-    transform:translateY(-2px);
-}
-
-.btn-outline{
-    border:1px solid #fff;
-    color:#fff;
-}
-
-.btn-outline:hover{
-    background:#fff;
-    color:#111827;
-}
-
-/* STATS */
-.stats{
-    background:#fff;
-    padding:25px 0;
-    box-shadow:0 4px 20px rgba(0,0,0,.07);
-}
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    text-align:center;
-}
-
-.stat{
-    padding:15px;
-}
-
-.stat strong{
-    display:block;
-    font-size:27px;
-    color:#111827;
-}
-
-.stat span{
-    color:#666;
-    font-size:14px;
-}
-
-/* CONTENT */
-section{
-    padding:55px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.section-title h2{
-    font-size:32px;
-    margin-bottom:8px;
-}
-
-.section-title p{
-    color:#666;
-}
-
-/* INFO */
-.info-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-}
-
-.info-box{
-    background:#fff;
-    padding:28px;
-    border-radius:14px;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
-}
-
-.info-box h3{
-    margin-bottom:14px;
-    font-size:22px;
-}
-
-.info-box ul{
-    padding-left:20px;
-}
-
-.info-box li{
-    margin:8px 0;
-}
-
-/* REQUIREMENTS */
-.requirements{
-    background:#111827;
-    color:white;
-}
-
-.req-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.req{
-    background:#1f2937;
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
-}
-
-.req strong{
-    display:block;
-    color:#ffd166;
-    margin-bottom:6px;
-}
-
-/* STEPS */
-.steps{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.step{
-    background:#fff;
-    padding:25px;
-    border-radius:14px;
-    text-align:center;
-    box-shadow:0 5px 18px rgba(0,0,0,.06);
-}
-
-.step-number{
-    width:42px;
-    height:42px;
-    line-height:42px;
-    margin:0 auto 12px;
-    border-radius:50%;
-    background:#111827;
-    color:#fff;
-    font-weight:bold;
-}
-
-/* GAME LIST */
-.games-section{
-    background:#eef2f7;
-}
-
-.search-box{
-    max-width:600px;
-    margin:0 auto 30px;
-}
-
-.search-box input{
-    width:100%;
-    padding:15px 18px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    font-size:16px;
-    outline:none;
-}
-
-.games-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.game-card{
-    background:#fff;
-    border-radius:14px;
-    padding:18px;
-    box-shadow:0 5px 18px rgba(0,0,0,.07);
-    text-align:center;
-    transition:.2s;
-}
-
-.game-card:hover{
-    transform:translateY(-4px);
-}
-
-.game-card img{
-    width:85px;
-    height:85px;
-    object-fit:cover;
-    border-radius:18px;
-    margin-bottom:12px;
-    background:#eee;
-}
-
-.game-card h3{
-    font-size:18px;
-    margin-bottom:6px;
-}
-
-.category{
-    font-size:13px;
-    color:#777;
-    margin-bottom:12px;
-}
-
-.download{
-    display:block;
-    background:#111827;
-    color:#fff;
-    padding:10px;
-    border-radius:7px;
-    font-weight:bold;
-}
-
-.download:hover{
-    background:#374151;
-}
-
-/* FAQ */
-.faq{
-    max-width:850px;
-    margin:auto;
-}
-
-details{
-    background:#fff;
-    margin-bottom:12px;
-    padding:18px 20px;
-    border-radius:10px;
-    box-shadow:0 3px 12px rgba(0,0,0,.05);
-}
-
-summary{
-    cursor:pointer;
-    font-weight:700;
-}
-
-/* DISCLAIMER */
-.disclaimer{
-    background:#fff4d6;
-    border-left:5px solid #e0a800;
-    padding:22px;
-    border-radius:8px;
-}
-
-/* FOOTER */
-footer{
-    background:#111827;
-    color:#d1d5db;
-    padding:35px 0;
-    text-align:center;
-}
-
-.footer-links{
-    margin-bottom:15px;
-}
-
-.footer-links a{
-    color:#fff;
-    margin:0 8px;
-}
-
-footer p{
-    font-size:14px;
-}
-
-/* MOBILE */
-@media(max-width:900px){
-
-    .hero-grid{
-        grid-template-columns:1fr;
-        text-align:center;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .buttons{
-        justify-content:center;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .stats-grid{
-        grid-template-columns:repeat(2,1fr);
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
     }
 
-    .games-grid{
-        grid-template-columns:repeat(2,1fr);
+    a {
+      text-decoration: none;
     }
 
-    .req-grid{
-        grid-template-columns:repeat(2,1fr);
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(17, 24, 39, 0.97);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
     }
 
-    .steps{
-        grid-template-columns:repeat(2,1fr);
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      min-height: 68px;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .info-grid{
-        grid-template-columns:1fr;
+    .logo {
+      color: white;
+      font-size: 23px;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
-    .nav-links{
-        display:none;
-    }
-}
-
-@media(max-width:550px){
-
-    .hero{
-        padding:45px 0;
+    .logo span {
+      color: #fbbf24;
     }
 
-    .hero h1{
-        font-size:42px;
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
     }
 
-    .hero h2{
-        font-size:21px;
+    .nav-links a {
+      color: #e5e7eb;
+      font-size: 14px;
+      font-weight: 600;
     }
 
-    .hero-image img{
-        width:170px;
-        height:170px;
+    .nav-links a:hover {
+      color: #fbbf24;
     }
 
-    .stats-grid{
-        grid-template-columns:1fr 1fr;
+    /* HERO */
+    .hero {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(251,191,36,.25), transparent 30%),
+        radial-gradient(circle at 85% 30%, rgba(59,130,246,.25), transparent 30%),
+        linear-gradient(135deg, #111827, #1e293b);
+      color: white;
+      padding: 75px 18px;
     }
 
-    .games-grid{
-        grid-template-columns:1fr 1fr;
-        gap:12px;
+    .hero-inner {
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
     }
 
-    .game-card{
-        padding:12px;
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 7px 15px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 18px;
     }
 
-    .game-card img{
-        width:70px;
-        height:70px;
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 58px);
+      line-height: 1.12;
+      margin-bottom: 18px;
     }
 
-    .game-card h3{
-        font-size:15px;
+    .hero h1 span {
+      color: #fbbf24;
     }
 
-    .req-grid,
-    .steps{
-        grid-template-columns:1fr;
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #d1d5db;
+      font-size: 16px;
     }
 
-    section{
-        padding:40px 0;
+    .hero-buttons {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
-}
-</style>
+
+    .btn {
+      display: inline-block;
+      border-radius: 10px;
+      padding: 13px 22px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: #fbbf24;
+      color: #111827;
+    }
+
+    .btn-dark {
+      background: #fff;
+      color: #111827;
+    }
+
+    /* SEARCH */
+    .search-area {
+      max-width: 850px;
+      margin: -28px auto 35px;
+      padding: 0 18px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .search-box {
+      background: white;
+      padding: 12px;
+      border-radius: 16px;
+      box-shadow: 0 8px 35px rgba(15,23,42,.14);
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-box input {
+      flex: 1;
+      border: 0;
+      outline: 0;
+      padding: 13px;
+      font-size: 15px;
+      background: #f8fafc;
+      border-radius: 10px;
+    }
+
+    .search-box button {
+      border: 0;
+      background: #111827;
+      color: white;
+      padding: 0 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    /* MAIN */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 18px 50px;
+    }
+
+    .section-head {
+      text-align: center;
+      margin: 45px 0 25px;
+    }
+
+    .section-head h2 {
+      font-size: 30px;
+      margin-bottom: 7px;
+    }
+
+    .section-head p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    /* FILTER */
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .filter {
+      border: 1px solid #e2e8f0;
+      background: white;
+      padding: 9px 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .filter.active,
+    .filter:hover {
+      background: #111827;
+      color: white;
+    }
+
+    /* GAME GRID */
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .game-card {
+      background: white;
+      border: 1px solid #e8edf4;
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 5px 20px rgba(15,23,42,.06);
+      transition: .25s;
+      overflow: hidden;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(15,23,42,.12);
+    }
+
+    .game-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .game-logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      object-fit: cover;
+      background: #eef2f7;
+      border: 1px solid #e5e7eb;
+    }
+
+    .game-name {
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .game-label {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 11px;
+      background: #ecfdf5;
+      color: #047857;
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-weight: 700;
+    }
+
+    .game-desc {
+      color: #64748b;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .game-info {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .info {
+      background: #f1f5f9;
+      padding: 5px 8px;
+      border-radius: 7px;
+      font-size: 11px;
+      color: #475569;
+      font-weight: 600;
+    }
+
+    .game-buttons {
+      display: flex;
+      gap: 9px;
+    }
+
+    .game-buttons a {
+      flex: 1;
+      text-align: center;
+      padding: 11px 8px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .visit {
+      background: #111827;
+      color: white;
+    }
+
+    .telegram {
+      background: #e8f3ff;
+      color: #1677c8;
+    }
+
+    /* FEATURE */
+    .feature-box {
+      margin-top: 50px;
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .feature {
+      padding: 20px;
+      background: #f8fafc;
+      border-radius: 14px;
+    }
+
+    .feature-icon {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .feature h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .feature p {
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    /* TELEGRAM */
+    .telegram-box {
+      margin-top: 35px;
+      border-radius: 18px;
+      padding: 28px;
+      background: #eaf5ff;
+      border: 1px solid #cfe8ff;
+      text-align: center;
+    }
+
+    .telegram-box h2 {
+      margin-bottom: 7px;
+    }
+
+    .telegram-box p {
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .tg-btn {
+      display: inline-block;
+      background: #229ed9;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 800;
+    }
+
+    /* INFO */
+    .info-section {
+      margin-top: 45px;
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .info-section h2 {
+      margin-bottom: 12px;
+      font-size: 23px;
+    }
+
+    .info-section h3 {
+      margin-top: 20px;
+      margin-bottom: 6px;
+      font-size: 17px;
+    }
+
+    .info-section p,
+    .info-section li {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .info-section ul {
+      padding-left: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 50px;
+      background: #111827;
+      color: #cbd5e1;
+      padding: 35px 18px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .footer-logo {
+      color: white;
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .footer-logo span {
+      color: #fbbf24;
+    }
+
+    .footer-links {
+      margin: 18px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      font-size: 13px;
+    }
+
+    .copyright {
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        padding: 55px 16px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .search-box {
+        padding: 8px;
+      }
+
+      .search-box button {
+        padding: 0 13px;
+      }
+
+      .game-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head h2 {
+        font-size: 25px;
+      }
+
+      .feature-box,
+      .info-section {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <!-- HEADER -->
 <header>
-<div class="container navbar">
+  <nav class="nav">
+    <a href="#" class="logo">YONO<span>Games</span></a>
 
-<a href="/" class="logo">
-All <span>Yono Game Apps</span>
-</a>
-
-<ul class="nav-links">
-<li><a href="/">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#games">Games</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#disclaimer">Disclaimer</a></li>
-</ul>
-
-</div>
+    <div class="nav-links">
+      <a href="#games">Games</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#disclaimer">Disclaimer</a>
+    </div>
+  </nav>
 </header>
 
 
 <!-- HERO -->
 <section class="hero">
-<div class="container hero-grid">
+  <div class="hero-inner">
 
-<div class="hero-image">
-<img src="/images/game-rummy.png"
-alt="Game Rummy App Logo"
-onerror="this.src='/images/all-yono-logo.png'">
-</div>
+    <div class="hero-badge">🎮 Gaming Apps & Updates</div>
 
-<div>
+    <h1>Explore <span>Latest Games</span> & Apps</h1>
 
-<h1>Game <span>Rummy</span></h1>
+    <p>
+      Find gaming apps, useful information and official/third-party
+      app links in one simple and mobile-friendly place.
+    </p>
 
-<h2>Game Rummy App Information & Download</h2>
+    <div class="hero-buttons">
+      <a href="#games" class="btn btn-primary">🎮 Explore Games</a>
 
-<p>
-Explore Game Rummy information, features, requirements and
-authorized download options from All Yono Game Apps.
-</p>
+      <a
+        href="https://t.me/yonogame_updates"
+        target="_blank"
+        rel="nofollow noopener"
+        class="btn btn-dark">
+        📢 Telegram Updates
+      </a>
+    </div>
 
-<div class="buttons">
-
-<a href="#download" class="btn btn-primary">
-Download Now
-</a>
-
-<a href="#games" class="btn btn-outline">
-View All Games
-</a>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 </section>
 
 
-<!-- STATS -->
-<section class="stats">
-<div class="container stats-grid">
-
-<div class="stat">
-<strong>60+</strong>
-<span>Listed Games</span>
-</div>
+<!-- SEARCH -->
+<div class="search-area">
+  <div class="search-box">
 
-<div class="stat">
-<strong>4</strong>
-<span>Main Categories</span>
-</div>
+    <input
+      type="text"
+      id="gameSearch"
+      placeholder="🔍 Search game name..."
+      onkeyup="searchGames()">
 
-<div class="stat">
-<strong>Mobile</strong>
-<span>Responsive Design</span>
-</div>
+    <button onclick="searchGames()">Search</button>
 
-<div class="stat">
-<strong>2026</strong>
-<span>Website Update</span>
+  </div>
 </div>
 
-</div>
-</section>
 
+<main class="container">
 
-<!-- ABOUT -->
-<section id="about">
-<div class="container">
+  <!-- GAMES -->
+  <section id="games">
 
-<div class="section-title">
-<h2>About Game Rummy</h2>
-<p>Game information and useful details</p>
-</div>
+    <div class="section-head">
+      <h2>🎮 Popular Games</h2>
+      <p>Explore the available gaming apps and links.</p>
+    </div>
 
-<div class="info-grid">
-
-<div class="info-box">
-<h3>What is Game Rummy?</h3>
-
-<p>
-Game Rummy is a rummy-focused gaming app listing featured
-on this directory. Users should check the application's
-current availability, terms, age requirements and applicable
-local laws before using any gaming service.
-</p>
-
-<p style="margin-top:12px;">
-All Yono Game Apps is an independent directory and does not
-claim ownership of third-party applications listed on this page.
-</p>
-</div>
+    <div class="filters">
 
+      <button class="filter active" onclick="filterGames('all', this)">
+        All
+      </button>
 
-<div class="info-box">
-<h3>Key Features</h3>
+      <button class="filter" onclick="filterGames('new', this)">
+        🆕 New
+      </button>
 
-<ul>
-<li>Simple mobile-friendly interface</li>
-<li>Rummy-focused game information</li>
-<li>Easy navigation</li>
-<li>Game category listings</li>
-<li>Responsive design for mobile devices</li>
-<li>Quick access to authorized links</li>
-</ul>
+      <button class="filter" onclick="filterGames('rummy', this)">
+        🃏 Rummy
+      </button>
 
-</div>
+      <button class="filter" onclick="filterGames('game', this)">
+        🎮 Games
+      </button>
 
-</div>
+    </div>
 
-</div>
-</section>
 
+    <div class="game-grid" id="gameGrid">
 
-<!-- FEATURES -->
-<section>
-<div class="container">
 
-<div class="section-title">
-<h2>Why Use All Yono Game Apps?</h2>
-<p>Everything is organized in one simple directory.</p>
-</div>
+      <!-- YONO GAME -->
+      <article class="game-card" data-category="game new">
 
-<div class="info-grid">
-
-<div class="info-box">
-<h3>Easy Navigation</h3>
-<p>
-Find rummy, arcade, slots and other listed games
-without searching through multiple pages.
-</p>
-</div>
+        <div class="game-top">
 
-<div class="info-box">
-<h3>Mobile Friendly</h3>
-<p>
-The website layout automatically adjusts to smartphones,
-tablets and desktop screens.
-</p>
-</div>
+          <!-- अपना YONO logo URL यहां डालें -->
+          <img
+            class="game-logo"
+            src="https://via.placeholder.com/150?text=YONO"
+            alt="YONO Game Logo">
 
-<div class="info-box">
-<h3>Game Information</h3>
-<p>
-Each listing can include its logo, category and a link
-to the relevant authorized source.
-</p>
-</div>
+          <div>
+            <div class="game-name">YONO Game</div>
+            <span class="game-label">NEW</span>
+          </div>
 
-<div class="info-box">
-<h3>Simple Design</h3>
-<p>
-Clean cards and clear buttons make the directory easy
-to browse.
-</p>
-</div>
+        </div>
 
-</div>
+        <p class="game-desc">
+          Visit the YONO Game page for app information and available access link.
+        </p>
 
-</div>
-</section>
+        <div class="game-info">
+          <span class="info">📱 Android</span>
+          <span class="info">🎮 Gaming</span>
+          <span class="info">🌐 Online</span>
+        </div>
 
+        <div class="game-buttons">
 
-<!-- REQUIREMENTS -->
-<section class="requirements">
-<div class="container">
+          <a
+            class="visit"
+            href="https://youonogamewinbig.com/?code=LHS8VU2LV3T&t=1789014668"
+            target="_blank"
+            rel="nofollow sponsored noopener">
+            Visit
+          </a>
 
-<div class="section-title">
-<h2>System Requirements</h2>
-<p style="color:#d1d5db;">
-Basic requirements may vary by individual application.
-</p>
-</div>
+          <a
+            class="telegram"
+            href="https://t.me/yonogame_updates"
+            target="_blank"
+            rel="nofollow noopener">
+            Telegram
+          </a>
 
-<div class="req-grid">
+        </div>
 
-<div class="req">
-<strong>Device</strong>
-Android / Compatible Device
-</div>
+      </article>
 
-<div class="req">
-<strong>Storage</strong>
-Keep enough free storage
-</div>
 
-<div class="req">
-<strong>Internet</strong>
-Stable Internet Connection
-</div>
+      <!-- YONO RUMMY -->
+      <article class="game-card" data-category="rummy new">
 
-<div class="req">
-<strong>Security</strong>
-Use trusted sources
-</div>
+        <div class="game-top">
 
-</div>
+          <img
+            class="game-logo"
+            src="https://via.placeholder.com/150?text=YONO+RUMMY"
+            alt="YONO Rummy Logo">
 
-</div>
-</section>
+          <div>
+            <div class="game-name">YONO Rummy</div>
+            <span class="game-label">POPULAR</span>
+          </div>
 
+        </div>
 
-<!-- DOWNLOAD STEPS -->
-<section id="download">
-<div class="container">
+        <p class="game-desc">
+          Explore YONO Rummy and visit the provided app page for more information.
+        </p>
 
-<div class="section-title">
-<h2>How to Download</h2>
-<p>Use only authorized and trusted download sources.</p>
-</div>
+        <div class="game-info">
+          <span class="info">🃏 Rummy</span>
+          <span class="info">📱 Android</span>
+          <span class="info">🌐 Online</span>
+        </div>
 
-<div class="steps">
+        <div class="game-buttons">
 
-<div class="step">
-<div class="step-number">1</div>
-<h3>Choose Game</h3>
-<p>Select the game you want from the list.</p>
-</div>
+          <a
+            class="visit"
+            href="https://yonorummy053.com/?code=TQJY95NGJNN&t=1789018050"
+            target="_blank"
+            rel="nofollow sponsored noopener">
+            Visit
+          </a>
 
-<div class="step">
-<div class="step-number">2</div>
-<h3>Check Source</h3>
-<p>Verify that the download link belongs to an authorized source.</p>
-</div>
+          <a
+            class="telegram"
+            href="https://t.me/yonogame_updates"
+            target="_blank"
+            rel="nofollow noopener">
+            Updates
+          </a>
 
-<div class="step">
-<div class="step-number">3</div>
-<h3>Download</h3>
-<p>Download the application only from a trusted source.</p>
-</div>
+        </div>
 
-<div class="step">
-<div class="step-number">4</div>
-<h3>Install</h3>
-<p>Follow your device's normal installation and security process.</p>
-</div>
+      </article>
 
-</div>
 
-</div>
-</section>
+      <!-- HI RUMMY -->
+      <article class="game-card" data-category="rummy new">
 
+        <div class="game-top">
 
-<!-- ALL GAMES -->
-<section id="games" class="games-section">
-<div class="container">
+          <img
+            class="game-logo"
+            src="https://via.placeholder.com/150?text=HI+RUMMY"
+            alt="Hi Rummy Logo">
 
-<div class="section-title">
-<h2>All Yono Games</h2>
-<p>Browse our 60-game directory.</p>
-</div>
+          <div>
+            <div class="game-name">Hi Rummy</div>
+            <span class="game-label">NEW</span>
+          </div>
 
-<div class="search-box">
-<input
-type="search"
-id="gameSearch"
-placeholder="Search game name..."
-onkeyup="searchGames()">
-</div>
+        </div>
 
-<div class="games-grid" id="gameList">
-
-<!-- 1 -->
-<div class="game-card">
-<img src="<a href="https://ibb.co/n8ZskDhG"><img src="https://i.ibb.co/KzRjy9CP/file-00000000d8d88208a985d445204ad66e.png"     alt="Yono 777 Logo">
-<h3>Yono 777</h3>
-<div class="category">Yono Game</div>
-<a href="https://uono777network.online/?code=F9M1NK6DTMW&t=1789182158" class="download">Download</a>
-</div>
+        <p class="game-desc">
+          Check the available Hi Rummy app page and related information.
+        </p>
 
-<!-- 2 -->
-<div class="game-card">
-<img src="<a href="https://ibb.co/1GSGjWZY"><img src="https://i.ibb.co/8ghgtZMn/IMG-20260806-104747.png" alt="IMG-20260806-104747" border="0"></a><br /><a target='_blank' href='https://usefulwebtool.com/math-keyboard'>fraction keyboard</a><br />" alt="YN 777 Logo">
-<h3>YN 777</h3>
-<div class="category">Game App</div>
-<a href="https://www.yn077.com/?code=4SW6VCFFZB9&t=1789182312" class="download">Download</a>
-</div>
+        <div class="game-info">
+          <span class="info">🃏 Rummy</span>
+          <span class="info">📱 Android</span>
+          <span class="info">🌐 Online</span>
+        </div>
 
-<!-- 3 -->
-<div class="game-card">
-<img src="/images/spin-crush.png" alt="Spin Crush Logo">
-<h3>Spin Crush</h3>
-<div class="category">Spin Game</div>
-<a href="#" class="download">Download</a>
-</div>
+        <div class="game-buttons">
 
-<!-- 4 -->
-<div class="game-card">
-<img src="/images/jaiho-rummy.png" alt="Jaiho Rummy Logo">
-<h3>Jaiho Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+          <a
+            class="visit"
+            href="https://joinhirummy.net/?code=RX3MPY48GBF&t=1786872489"
+            target="_blank"
+            rel="nofollow sponsored noopener">
+            Visit
+          </a>
 
-<!-- 5 -->
-<div class="game-card">
-<img src="/images/hi-rummy.png" alt="Hi Rummy Logo">
-<h3>Hi Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+          <a
+            class="telegram"
+            href="https://t.me/yonogame_updates"
+            target="_blank"
+            rel="nofollow noopener">
+            Updates
+          </a>
 
-<!-- 6 -->
-<div class="game-card">
-<img src="/images/gold-rummy.png" alt="Gold Rummy Logo">
-<h3>Gold Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+        </div>
+
+      </article>
 
-<!-- 7 -->
-<div class="game-card">
-<img src="/images/money-rummy.png" alt="Money Rummy Logo">
-<h3>Money Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
 
-<!-- 8 -->
-<div class="game-card">
-<img src="/images/max-rummy.png" alt="Max Rummy Logo">
-<h3>Max Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+      <!-- ADD MORE GAME CARD HERE -->
 
-<!-- 9 -->
-<div class="game-card">
-<img src="/images/boss-rummy.png" alt="Boss Rummy Logo">
-<h3>Boss Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+      <!--
+      <article class="game-card" data-category="game">
 
-<!-- 10 -->
-<div class="game-card">
-<img src="/images/win-rummy.png" alt="Win Rummy Logo">
-<h3>Win Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+        <div class="game-top">
 
-<!-- 11 -->
-<div class="game-card">
-<img src="/images/rumble-rummy.png" alt="Rumble Rummy Logo">
-<h3>Rumble Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+          <img
+            class="game-logo"
+            src="YOUR-LOGO-URL"
+            alt="Game Logo">
 
-<!-- 12 -->
-<div class="game-card">
-<img src="/images/rummy-888.png" alt="Rummy 888 Logo">
-<h3>Rummy 888</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+          <div>
+            <div class="game-name">YOUR GAME</div>
+            <span class="game-label">NEW</span>
+          </div>
 
-<!-- 13 -->
-<div class="game-card">
-<img src="/images/rummy-91.png" alt="Rummy 91 Logo">
-<h3>Rummy 91</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+        </div>
 
-<!-- 14 -->
-<div class="game-card">
-<img src="/images/rummy-ludo.png" alt="Rummy Ludo Logo">
-<h3>Rummy Ludo</h3>
-<div class="category">Rummy / Ludo</div>
-<a href="#" class="download">Download</a>
-</div>
+        <p class="game-desc">
+          Your game description here.
+        </p>
 
-<!-- 15 -->
-<div class="game-card">
-<img src="/images/love-rummy.png" alt="Love Rummy Logo">
-<h3>Love Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+        <div class="game-info">
+          <span class="info">📱 Android</span>
+          <span class="info">🎮 Game</span>
+          <span class="info">🌐 Online</span>
+        </div>
 
-<!-- 16 -->
-<div class="game-card">
-<img src="/images/abc-rummy.png" alt="ABC Rummy Logo">
-<h3>ABC Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+        <div class="game-buttons">
 
-<!-- 17 -->
-<div class="game-card">
-<img src="/images/ind-rummy.png" alt="IND Rummy Logo">
-<h3>IND Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+          <a
+            class="visit"
+            href="YOUR-GAME-LINK"
+            target="_blank"
+            rel="nofollow sponsored noopener">
+            Visit
+          </a>
 
-<!-- 18 -->
-<div class="game-card">
-<img src="/images/top-rummy.png" alt="Top Rummy Logo">
-<h3>Top Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+          <a
+            class="telegram"
+            href="https://t.me/yonogame_updates"
+            target="_blank"
+            rel="nofollow noopener">
+            Updates
+          </a>
 
-<!-- 19 -->
-<div class="game-card">
-<img src="/images/joy-rummy.png" alt="Joy Rummy Logo">
-<h3>Joy Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+        </div>
 
-<!-- 20 -->
-<div class="game-card">
-<img src="/images/game-rummy.png" alt="Game Rummy Logo">
-<h3>Game Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+      </article>
+      -->
 
-<!-- 21 -->
-<div class="game-card">
-<img src="/images/inr-rummy.png" alt="INR Rummy Logo">
-<h3>INR Rummy</h3>
-<div class="category">Rummy</div>
-<a href="#" class="download">Download</a>
-</div>
+    </div>
 
-<!-- 22 -->
-<div class="game-card">
-<img src="/images/club-inr.png" alt="Club INR Logo">
-<h3>Club INR</h3>
-<div class="category">Game App</div>
-<a href="#" class="download">Download</a>
-</div>
+    <p
+      id="noResults"
+      style="display:none;text-align:center;margin-top:25px;color:#64748b;">
+      No game found.
+    </p>
 
-<!-- 23 -->
-<div class="game-card">
-<img src="/images/jaiho-91.png" alt="Jaiho 91 Logo">
-<h3>Jaiho 91</h3>
-<div class="category">Game App</div>
-<a href="#" class="download">Download</a>
-</div>
+  </section>
 
-<!-- 24 -->
-<div class="game-card">
-<img src="/images/jaiho-777.png" alt="Jaiho 777 Logo">
-<h3>Jaiho 777</h3>
-<div class="category">Game App</div>
-<a href="#" class="download">Download</a>
-</div>
 
-<!-- 25 -->
-<div class="game-card">
-<img src="/images/jaiho-arcade.png" alt="Jaiho Arcade Logo">
-<h3>Jaiho Arcade</h3>
-<div class="category">Arcade</div>
-<a href="#" class="download">Download</a>
-</div>
+  <!-- FEATURES -->
+  <section id="features" class="feature-box">
 
-<!-- 26 -->
-<div class="game-card">
-<img src="/images/jaiho-spin.png" alt="Jaiho Spin Logo">
-<h3>Jaiho Spin</h3>
-<div class="category">Spin</div>
-<a href="#" class="download">Download</a>
-</div>
+    <div class="section-head" style="margin-top:0;">
+      <h2>⭐ Website Features</h2>
+      <p>Simple, fast and mobile-friendly experience.</p>
+    </div>
 
-<!-- 27 -->
-<div class="game-card">
-<img src="/images/jaiho-slots.png" alt="Jaiho Slots Logo">
-<h3>Jaiho Slots</h3>
-<div class="category">Slots</div>
-<a href="#" class="download">Download</a>
-</div>
+    <div class="feature-grid">
 
-<!-- 28 -->
-<div class="game-card">
-<img src="/images/spin-777.png" alt="Spin 777 Logo">
-<h3>Spin 777</h3>
-<div class="category">Spin</div>
-<a href="#" class="download">Download</a>
-</div>
+      <div class="feature">
+        <div class="feature-icon">📱</div>
+        <h3>Mobile Friendly</h3>
+        <p>
+          The website is designed to work smoothly on mobile,
+          tablet and desktop screens.
+        </p>
+      </div>
 
-<!-- 29 -->
-<div class="game-card">
-<img src="/images/spin-winner.png" alt="Spin Winner Logo">
-<h3>Spin Winner</h3>
-<div class="category">Spin</div>
-<a href="#" class="download">Download</a>
-</div>
+      <div class="feature">
+        <div class="feature-icon">🔍</div>
+        <h3>Easy Search</h3>
+        <p>
+          Quickly search available games by their name.
+        </p>
+      </div>
 
-<!-- 30 -->
-<div class="game-card">
-<img src="/images/spin-lucky.png" alt="Spin Lucky Logo">
-<h3>Spin Lucky</h3>
-<div class="category">Spin</div>
-<a href="#" class="download">Download</a>
-</div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Fast Design</h3>
+        <p>
+          Lightweight HTML and CSS layout for a clean browsing experience.
+        </p>
+      </div>
 
-<!-- 31 -->
-<div class="game-card">
-<img src="/images/spin-gold.png" alt="Spin Gold Logo">
-<h3>Spin Gold</h3>
-<div class="category">Spin</div>
-<a href="#" class="download">Download</a>
-</div>
+    </div>
 
-<!-- 32 -->
-<div class="game-card">
-<img src="/images/slots-winner.png" alt="Slots Winner Logo">
-<h3>Slots Winner</h3>
-<div class="category">Slots</div>
-<a href="#" class="download">Download</a>
-</div>
+  </section>
 
-<!-- 33 -->
-<div class="game-card">
-<img src="/images/slots-spin.png" alt="Slots Spin Logo">
-<h3>Slots Spin</h3>
-<div class="category">Slots</div>
-<a href="#" class="download">Download</a>
-</div>
 
-<!-- 34 -->
-<div class="game-card">
-<img src="/images/saga-slots.png" alt="Saga Slots Logo">
-<h3>Saga Slots</h3>
-<div class="category">Slots</div>
-<a href="#" class="download">Download</a>
-</div>
+  <!-- TELEGRAM -->
+  <section class="telegram-box">
 
-<!-- 35 -->
-<div class="game-card">
-<img src="/images/ind-slots.png" alt="IND Slots Logo">
-<h3>IND Slots</h3>
-<div class="category">Slots</div>
-<a href="#" class="download">Download</a>
-</div>
+    <h2>📢 Get Game Updates</h2>
 
-<!-- 36 -->
-<div class="game-card">
-<img src="/images/ind-club.png" alt="IND Club Logo">
-<h3>IND Club</h3>
-<div class="category">Game App</div>
-<a href="#" class="download">Download</a>
-</div>
+    <p>
+      Follow the Telegram channel for updates and new information.
+    </p>
 
-<!-- 37 -->
-<div class="game-card">
-<img src="/images/ind-bingo.png" alt="IND Bingo Logo">
-<h3>IND Bingo</h3>
-<div class="category">Bingo</div>
-<a href="#" class="download">Download</a>
-</div>
+    <a
+      class="tg-btn"
+      href="https://t.me/yonogame_updates"
+      target="_blank"
+      rel="nofollow noopener">
+      Join Telegram
+    </a>
 
-<!-- 38 -->
-<div class="game-card">
-<img src="/images/hindi-777.png" alt="Hindi 777 Logo">
-<h3>Hindi 777</h3>
-<div class="category">Game App</div>
-<a href="#" class="download">Download</a>
-</div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about" class="info-section">
+
+    <h2>About YONO Games</h2>
+
+    <p>
+      This website is an informational directory for gaming apps and
+      related links. We provide information to help visitors find
+      available gaming resources in one place.
+    </p>
+
+    <h3>How to use this website?</h3>
+
+    <p>
+      Search for a game, review the available information and use the
+      Visit button if you want to access the external website.
+    </p>
+
+  </section>
+
+
+  <!-- DISCLAIMER -->
+  <section id="disclaimer" class="info-section">
+
+    <h2>Disclaimer</h2>
+
+    <p>
+      This website is an independent informational website and is not
+      affiliated with, endorsed by, or officially connected to the
+      third-party websites or applications listed here unless explicitly
+      stated.
+    </p>
+
+    <p style="margin-top:12px;">
+      External links may lead to third-party websites. Users should
+      review the terms, privacy policies, age requirements and applicable
+      laws before using any third-party service.
+    </p>
+
+    <p style="margin-top:12px;">
+      We do not guarantee winnings, profits, bonuses, availability,
+      security or performance of any third-party application or website.
+    </p>
+
+    <p style="margin-top:12px;">
+      If real-money gaming is restricted or prohibited in your location,
+      do not use such services. Users are responsible for complying with
+      applicable local laws.
+    </p>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-logo">
+      YONO<span>Games</span>
+    </div>
+
+    <p>
+      Gaming information and external app links.
+    </p>
+
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#disclaimer">Disclaimer</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="copyright">
+      © 2026 YONO Games. All rights reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  /* SEARCH GAMES */
+  function searchGames() {
+
+    const input =
+      document.getElementById("gameSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+      document.querySelectorAll(".game-card");
+
+    let found = 0;
+
+    cards.forEach(card => {
+
+      const text =
+        card.innerText.toLowerCase();
+
+      if (text.includes(input)) {
+
+        card.style.display = "";
+
+        found++;
+
+      } else {
+
+        card.style.display = "none";
+
+      }
+
+    });
+
+    document.getElementById("noResults").style.display =
+      found === 0 ? "block" : "none";
+  }
+
+
+  /* FILTER GAMES */
+  function filterGames(category, button) {
+
+    const buttons =
+      document.querySelectorAll(".filter");
+
+    buttons.forEach(btn =>
+      btn.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+    const cards =
+      document.querySelectorAll(".game-card");
+
+    let found = 0;
+
+    cards.forEach(card => {
+
+      const categories =
+        card.dataset.category;
+
+      if (
+        category === "all" ||
+        categories.includes(category)
+      ) {
+
+        card.style.display = "";
+        found++;
+
+      } else {
+
+        card.style.display = "none";
+
+      }
+
+    });
+
+    document.getElementById("noResults").style.display =
+      found === 0 ? "block" : "none";
+
+  }
+
+</script>
 
-<!-- 39 -->
-<div class="game-card">
-<img src="/images/diwaking.png" alt="DiwaKing Logo">
-<h3>DiwaKing
+</body>
+</html>
